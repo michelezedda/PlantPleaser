@@ -1,21 +1,17 @@
-import { useState, useEffect } from "react";
-
+import { useState } from "react";
+import Popular from "./Popular";
 
 function Home() {
-
-  function viewRecipe() {
-    window.location.href = "./Recipe.jsx"
-  }
+  const [] = useState();
 
   return (
-    
     <>
       <div className="home-container">
-        <h1>Home</h1>
-        <button onClick={viewRecipe}>View Recipe</button>
+        <h2>Home</h2>
       </div>
+      <Popular />
     </>
-  )
+  );
 }
 
-export default Home
+export default Home;
