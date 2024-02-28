@@ -2,10 +2,10 @@ import { useEffect, useState } from "react";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 
 const BASE_URL = "https://api.spoonacular.com/";
-const KEY = "6c999bc765be4b6fbe04290c62df9d3c";
+const KEY = "9916ddb00d084027bdf1766ef68da8dd";
 const DIET = "vegan";
 
-function Home() {
+function Home({ searchResults }) {
   const [recipes, setRecipes] = useState([]);
 
   useEffect(() => {
@@ -46,6 +46,18 @@ function Home() {
           <div>beverage</div>
         </div>
       </div>
+
+      <div className="search-result-container">
+        {searchResults.map((result) => (
+          <div key={result.id}>
+            <h2>{result.title}</h2>
+            <img src={result.image} alt={result.title} />
+            <p>{result.description}</p>
+            <button className="view-recipe-btn">View Recipe</button>
+          </div>
+        ))}
+      </div>
+
       <div className="popular-container">
         <h2>Popular</h2>
         <Splide
