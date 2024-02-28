@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
-import myLogo from "../public/logo.png";
+import myLogo from "/logo.png";
 import { FaMagnifyingGlass } from "react-icons/fa6";
-import axios from "axios";
 
 function Navbar() {
   return (

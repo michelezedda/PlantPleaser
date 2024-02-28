@@ -9,7 +9,7 @@ function Home() {
   const [recipes, setRecipes] = useState([]);
 
   useEffect(() => {
-    fetch(`${BASE_URL}recipes/random?apiKey=${KEY}&number=9&diet=${DIET}`)
+    fetch(`${BASE_URL}recipes/random?apiKey=${KEY}&number=5&tags=${DIET}`)
       .then((response) => {
         if (response.ok) {
           return response.json();

@@ -83,53 +83,52 @@ input:focus {
 }
 /* HOME */
 .home-container {
-  display: flex;
-  justify-content: center;
+  display: grid;
   align-items: center;
-  padding-top: 100px;
-}
-.home-title-container {
-  display: flex;
-  justify-content: center;
-}
-.home-title-container h2 {
-  font-size: 35px;
+  padding-top: 150px;
 }
 .select-menu {
   display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  margin-top: 130px;
 }
 .select-menu div {
-  display: flex;
+  display: grid;
   padding: 20px;
   border-radius: 25px;
   box-shadow: 4px 4px 4px #7e7e7e3a;
   width: 100px;
   background-color: #00000009;
-  margin-top: 100px;
   margin-right: 10px;
   cursor: pointer;
+  text-align: center;
+}
+.select-menu div:hover {
+  background-color: #0000001a;
 }
 .popular-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  column-gap: 30px;
-  row-gap: 40px;
-  padding-top: 100px;
+  align-items: center;
+  padding-top: 150px;
 }
-.popular-container h2 {
+.popular-title-container {
+  display: flex;
+  justify-content: center;
+}
+.popular-title-container h2 {
   font-size: 35px;
+  text-align: center;
 }
 .card-container {
   display: flex;
   justify-content: center;
-  margin-top: 130px;
+  align-items: center;
+  text-align: center;
 }
 .card {
-  display: flex;
+  text-align: center;
   flex-direction: column;
-  align-items: center;
   padding: 20px;
   border-radius: 25px;
   box-shadow: 4px 4px 4px #7e7e7e3a;
@@ -150,7 +149,7 @@ input:focus {
   font-size: 20px;
   padding: 15px 50px;
   border-radius: 5px;
-  color: $primary-color;
+  color: var(--toggle-fg);
   font-weight: 500;
   transition: backgroud 0.5s;
   cursor: pointer;
@@ -176,8 +175,6 @@ input:focus {
   z-index: 50;
 }
 /* RECIPE */
-.recipe-container {
-}
 
 @media (prefers-color-scheme: light) {
   :root {
