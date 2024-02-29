@@ -59,6 +59,7 @@ input:focus {
   width: 100%;
   padding: 0 100px;
   z-index: 100;
+  border-bottom: #00000025 1px solid;
 }
 .navbar-container img {
   height: 100px;
@@ -174,15 +175,56 @@ input:focus {
 .view-recipe-btn:active {
   transform: scale(0.98);
 }
+.full-recipe {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(255, 246, 236);
+  padding: 20px;
+  border: 3px solid #0b4516b2;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+.full-recipe h2 {
+  margin-top: 0;
+  text-align: center;
+}
+.full-recipe img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+.full-recipe p {
+  margin-bottom: 10px;
+}
+.full-recipe button {
+  position: absolute;
+  top: 19px;
+  right: 30px;
+  background-color: #0b4516b2;
+  text-align: center;
+  font-size: 20px;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.full-recipe button:hover {
+  background-color: #0b451675;
+}
+.full-recipe button:active {
+  transform: scale(0.98);
+}
 /* FOOTER */
 .footer-container {
   padding: 20px;
   text-align: center;
-  position: fixed;
-  left: 0;
-  bottom: 0;
+  position: static;
   width: 100%;
-  z-index: 100;
   background-color: #4c8e342d;
   margin-top: 100px;
 }
