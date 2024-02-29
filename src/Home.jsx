@@ -5,11 +5,11 @@ function Home({ searchResults }) {
   const [recipes, setRecipes] = useState([]);
   const [selectedRecipe, setSelectedRecipe] = useState(null);
 
-  const handleViewRecipe = (recipe) => {
+  const handleViewRandomRecipe = (recipe) => {
     setSelectedRecipe(recipe);
   };
 
-  const fetchRecipes = async () => {
+  const fetchRandomRecipes = async () => {
     try {
       const response = await axios.get(
         `https://api.spoonacular.com/recipes/random`,
@@ -28,7 +28,7 @@ function Home({ searchResults }) {
   };
 
   useEffect(() => {
-    fetchRecipes();
+    fetchRandomRecipes();
   }, []);
 
   return (
@@ -68,7 +68,7 @@ function Home({ searchResults }) {
                 <img src={recipe.image} alt={recipe.title} />
                 <button
                   className="view-recipe-btn"
-                  onClick={() => handleViewRecipe(recipe)}
+                  onClick={() => handleViewRandomRecipe(recipe)}
                 >
                   View Recipe
                 </button>
@@ -94,7 +94,10 @@ function Home({ searchResults }) {
                 .join(", ")}
             </p>
             <p>
-              <b>Instructions:</b> {selectedRecipe.instructions}
+              <b>Instructions:</b>{" "}
+              {selectedRecipe.instructions
+                ? selectedRecipe.instructions
+                : "No instructions available"}
             </p>
           </div>
         )}
