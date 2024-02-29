@@ -3,6 +3,7 @@ import React from "react";
 import Navbar from "./Navbar";
 import Home from "./Home";
 import Popular from "./Popular.jsx";
+import Recipe from "./Recipe.jsx";
 import Footer from "./Footer.jsx";
 import axios from "axios";
 
@@ -11,15 +12,16 @@ function App() {
   const [searchResults, setSearchResults] = useState([]);
 
   const handleSearch = async () => {
+    const myKey = import.meta.env.VITE_SOME_KEY;
     try {
       const response = await axios.get(
         "https://api.spoonacular.com/recipes/search",
         {
           params: {
+            apiKey: myKey,
             query: searchRecipe,
-            diet: "vegan",
+            diet: "vegan, vegeterian",
             number: "4",
-            apiKey: "6c999bc765be4b6fbe04290c62df9d3c",
           },
         }
       );
@@ -32,12 +34,13 @@ function App() {
   return (
     <>
       <Navbar
-        searchTerm={searchRecipe}
-        setSearchTerm={setSearchRecipe}
+        searchRecipe={searchRecipe}
+        setSearchRecipe={setSearchRecipe}
         handleSearch={handleSearch}
       />
       <Home searchResults={searchResults} />
       <Popular />
+      <Recipe />
       <Footer />
     </>
   );

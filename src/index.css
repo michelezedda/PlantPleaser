@@ -215,6 +215,9 @@ input:focus {
 .full-recipe button:active {
   transform: scale(0.98);
 }
+/* RECIPE */
+.recipe-container {
+}
 /* FOOTER */
 .footer-container {
   padding: 20px;
@@ -226,7 +229,6 @@ input:focus {
   bottom: 0;
   left: 0;
 }
-/* RECIPE */
 @media (prefers-color-scheme: light) {
   :root {
     color: var(--toggle-fg);

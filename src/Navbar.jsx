@@ -1,24 +1,40 @@
-import { useState, useEffect } from "react";
+import React from "react";
+import PropTypes from "prop-types";
 import myLogo from "/logo.png";
-import { FaMagnifyingGlass } from "react-icons/fa6";
-import axios from "axios";
+import { FaSearch } from "react-icons/fa";
 
 function Navbar({ searchRecipe, setSearchRecipe, handleSearch }) {
+  const handleChange = (e) => {
+    setSearchRecipe(e.target.value);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    handleSearch();
+  };
+
   return (
-    <>
-      <div className="navbar-container">
-        <img src={myLogo} alt="plantpleaser logo" />
+    <div className="navbar-container">
+      <img src={myLogo} alt="plantpleaser logo" />
+      <form onSubmit={handleSubmit}>
         <input
           type="text"
           value={searchRecipe}
-          onChange={(e) => setSearchRecipe(e.target.value)}
+          onChange={handleChange}
+          placeholder="search for a recipe"
         />
-        <button className="search-btn" onClick={handleSearch}>
-          <FaMagnifyingGlass />
+        <button type="submit" className="search-btn">
+          <FaSearch />
         </button>
-      </div>
-    </>
+      </form>
+    </div>
   );
 }
+
+Navbar.propTypes = {
+  searchRecipe: PropTypes.string.isRequired,
+  setSearchRecipe: PropTypes.func.isRequired,
+  handleSearch: PropTypes.func.isRequired,
+};
 
 export default Navbar;

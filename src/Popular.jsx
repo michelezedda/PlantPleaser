@@ -10,14 +10,15 @@ function Popular() {
   };
 
   const fetchRandomRecipes = async () => {
+    const myKey = import.meta.env.VITE_SOME_KEY;
     try {
       const response = await axios.get(
         `https://api.spoonacular.com/recipes/random`,
         {
           params: {
-            apiKey: "6c999bc765be4b6fbe04290c62df9d3c",
-            number: "9",
-            tags: "vegeterian, vegan",
+            apiKey: myKey,
+            diet: "vegan, vegeterian",
+            number: "4",
           },
         }
       );
