@@ -1,18 +1,23 @@
 import { useEffect, useState } from "react";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
-
-const BASE_URL = "https://api.spoonacular.com/";
-const KEY = "9916ddb00d084027bdf1766ef68da8dd";
-const DIET = "vegan";
+import axios from "axios";
 
 function Home({ searchResults }) {
   const [recipes, setRecipes] = useState([]);
 
+  const BASE_URL = "https://api.spoonacular.com/";
+  const KEY = "9916ddb00d084027bdf1766ef68da8dd";
+  const DIET = "vegan";
+  const NUMBER = "9";
+
   useEffect(() => {
-    fetch(`${BASE_URL}recipes/random?apiKey=${KEY}&number=5&tags=${DIET}`)
+    axios
+      .get(
+        `${BASE_URL}recipes/random?apiKey=${KEY}&number=${NUMBER}&tags=${DIET}`
+      )
       .then((response) => {
-        if (response.ok) {
-          return response.json();
+        if (response.status === 200) {
+          return response.data;
         }
         throw new Error("Network response was not ok.");
       })
@@ -31,9 +36,7 @@ function Home({ searchResults }) {
   return (
     <>
       <div className="home-container">
-        <div className="home-title-container">
-          <h2>Selection</h2>
-        </div>
+        <h2>Selection</h2>
         <div className="select-menu">
           <div>appetizer</div>
           <div>main course</div>
@@ -60,29 +63,19 @@ function Home({ searchResults }) {
 
       <div className="popular-container">
         <h2>Popular</h2>
-        <Splide
-          options={{
-            perPage: 4,
-            arrows: false,
-            pagination: false,
-            drag: "free",
-            gap: "5rem",
-          }}
-        >
-          <div className="card-container">
-            {recipes.map((recipe) => {
-              return (
-                <SplideSlide>
-                  <div className="card">
-                    <h3>{recipe.title}</h3>
-                    <img src={recipe.image} alt={recipe.title} />
-                    <button className="view-recipe-btn">View Recipe</button>
-                  </div>
-                </SplideSlide>
-              );
-            })}
-          </div>
-        </Splide>
+        <div className="card-container">
+          {recipes.length > 0 ? (
+            recipes.map((recipe) => (
+              <div className="card" key={recipe.id}>
+                <h3>{recipe.title}</h3>
+                <img src={recipe.image} alt={recipe.title} />
+                <button className="view-recipe-btn">View Recipe</button>
+              </div>
+            ))
+          ) : (
+            <p>No recipes found</p>
+          )}
+        </div>
       </div>
     </>
   );

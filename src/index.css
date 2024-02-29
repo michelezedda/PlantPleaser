@@ -83,15 +83,16 @@ input:focus {
 }
 /* HOME */
 .home-container {
-  display: grid;
-  align-items: center;
-  padding-top: 150px;
+  padding-top: 100px;
+}
+.home-container h2 {
+  text-align: center;
+  font-size: 40px;
 }
 .select-menu {
-  display: flex;
+  display: grid;
+  grid-auto-flow: column;
   justify-content: center;
-  align-items: center;
-  text-align: center;
 }
 .select-menu div {
   display: grid;
@@ -106,6 +107,9 @@ input:focus {
 }
 .select-menu div:hover {
   background-color: #0000001a;
+}
+.select-menu div:active {
+  transform: scale(0.98);
 }
 .search-result-container {
   display: grid;
@@ -127,52 +131,42 @@ input:focus {
   width: 200px;
 }
 .popular-container {
-  display: grid;
-  align-items: center;
-  padding-top: 150px;
-  padding-bottom: 150px;
 }
-.popular-title-container {
-  display: flex;
-  justify-content: center;
-}
-.popular-title-container h2 {
-  font-size: 35px;
+.popular-container h2 {
   text-align: center;
+  font-size: 40px;
 }
 .card-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
 }
 .card {
+  display: grid;
+  grid-template-columns: (auto-fit, minmax(200px, 1fr));
   text-align: center;
   flex-direction: column;
   padding: 20px;
   border-radius: 25px;
   box-shadow: 4px 4px 4px #7e7e7e3a;
-  width: 400px;
+  width: 200px;
   background-color: #00000009;
   margin-right: 10px;
 }
 .card img {
   border-radius: 25px;
-  width: 400px;
+  width: 200px;
 }
 .view-recipe-btn {
-  display: block;
   margin-top: 20px;
-  width: fit-content;
   border: none;
   background-color: #4eb6615a;
-  font-size: 20px;
+  font-size: 15px;
   padding: 15px 50px;
   border-radius: 5px;
-  color: var(--toggle-fg);
-  font-weight: 500;
   transition: backgroud 0.5s;
   cursor: pointer;
+  justify-self: center;
 }
 .view-recipe-btn:hover {
   background-color: hsla(119, 56%, 49%, 0.264);
@@ -182,16 +176,15 @@ input:focus {
 }
 /* FOOTER */
 .footer-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
+  padding: 20px;
+  text-align: center;
+  position: fixed;
+  left: 0;
   bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
   width: 100%;
+  z-index: 100;
   background-color: #4c8e342d;
-  padding: 0 100px;
+  margin-top: 100px;
 }
 /* RECIPE */
 @media (prefers-color-scheme: light) {

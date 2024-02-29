@@ -17,13 +17,14 @@ function App() {
           params: {
             query: searchRecipe,
             diet: "vegan",
+            number: "9",
             apiKey: "9916ddb00d084027bdf1766ef68da8dd",
           },
         }
       );
       setSearchResults(response.data.results);
     } catch (error) {
-      console.error("Errore nella ricerca:", error);
+      console.error("Error fetching data", error);
     }
   };
 
