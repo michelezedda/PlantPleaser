@@ -19,7 +19,7 @@ function App() {
             query: searchRecipe,
             diet: "vegan",
             number: "4",
-            apiKey: "9e0c96ea51a24d6d86010dbcabec905f",
+            apiKey: "6c999bc765be4b6fbe04290c62df9d3c",
           },
         }
       );

@@ -3,10 +3,10 @@ import axios from "axios";
 
 function Popular() {
   const [randomRecipes, setRandomRecipes] = useState([]);
-  const [selectedRandomRecipe, setSelectedRecipe] = useState(null);
+  const [selectedRandomRecipe, setSelectedRandomRecipe] = useState(null);
 
   const handleViewRandomRecipe = (recipe) => {
-    setSelectedRecipe(recipe);
+    setSelectedRandomRecipe(recipe);
   };
 
   const fetchRandomRecipes = async () => {
@@ -15,9 +15,9 @@ function Popular() {
         `https://api.spoonacular.com/recipes/random`,
         {
           params: {
-            apiKey: "9e0c96ea51a24d6d86010dbcabec905f",
+            apiKey: "6c999bc765be4b6fbe04290c62df9d3c",
             number: "9",
-            tags: "vegan",
+            tags: "vegeterian, vegan",
           },
         }
       );
@@ -58,12 +58,18 @@ function Popular() {
             <img
               src={selectedRandomRecipe.image}
               alt={selectedRandomRecipe.title}
+              onError={(event) => {
+                event.target.src = "default-pic.png";
+              }}
             />
             <p>
               <b>Servings:</b> {selectedRandomRecipe.servings}{" "}
             </p>
             <p>
               <b>Ready In:</b> {selectedRandomRecipe.readyInMinutes} minutes
+            </p>
+            <p>
+              <b>Diet:</b> {selectedRandomRecipe.diet}
             </p>
             <p>
               <b>Ingredients:</b>{" "}
