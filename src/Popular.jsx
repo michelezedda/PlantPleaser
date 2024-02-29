@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 function Popular() {
   const [randomRecipes, setRandomRecipes] = useState([]);
@@ -42,12 +43,13 @@ function Popular() {
               <div className="card" key={randomRecipe.id}>
                 <h3>{randomRecipe.title}</h3>
                 <img src={randomRecipe.image} alt={randomRecipe.title} />
-                <button
+                <Link
+                  to={`/recipe/${randomRecipe.id}`}
+                  ricetta
                   className="view-recipe-btn"
-                  onClick={() => handleViewRandomRecipe(randomRecipe)}
                 >
                   View Recipe
-                </button>
+                </Link>
               </div>
             ))}
           </div>

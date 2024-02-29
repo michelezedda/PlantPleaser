@@ -1,4 +1,4 @@
-function Recipe() {
+function Recipe({ searchResults }) {
   return (
     <>
       <div className="recipe-container">

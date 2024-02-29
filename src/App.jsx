@@ -3,7 +3,6 @@ import React from "react";
 import Navbar from "./Navbar";
 import Home from "./Home";
 import Popular from "./Popular.jsx";
-import Recipe from "./Recipe.jsx";
 import Footer from "./Footer.jsx";
 import axios from "axios";
 
@@ -40,7 +39,6 @@ function App() {
       />
       <Home searchResults={searchResults} />
       <Popular />
-      <Recipe />
       <Footer />
     </>
   );

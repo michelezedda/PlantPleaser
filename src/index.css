@@ -164,6 +164,8 @@ input:focus {
   transition: backgroud 0.5s;
   cursor: pointer;
   justify-self: center;
+  text-decoration: none;
+  color: #000000;
 }
 .view-recipe-btn:hover {
   background-color: hsla(119, 56%, 49%, 0.264);
@@ -215,9 +217,6 @@ input:focus {
 .full-recipe button:active {
   transform: scale(0.98);
 }
-/* RECIPE */
-.recipe-container {
-}
 /* FOOTER */
 .footer-container {
   padding: 20px;
@@ -228,6 +227,24 @@ input:focus {
   margin-top: 100px;
   bottom: 0;
   left: 0;
+}
+/* NOT FOUND PAGE */
+.not-found-container {
+  border: #000000 solid 5px;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  background-color: #4c8e342d;
+  margin-top: 100px;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  color: #000000;
+}
+/* RECIPE */
+.recipe-container {
 }
 @media (prefers-color-scheme: light) {
   :root {
