@@ -84,11 +84,7 @@ input:focus {
 }
 /* HOME */
 .home-container {
-  padding-top: 100px;
-}
-.home-container h2 {
-  text-align: center;
-  font-size: 40px;
+  padding-top: 120px;
 }
 .select-menu {
   display: grid;
@@ -223,10 +219,12 @@ input:focus {
 .footer-container {
   padding: 20px;
   text-align: center;
-  position: static;
+  position: absolute;
   width: 100%;
   background-color: #4c8e342d;
   margin-top: 100px;
+  bottom: 0;
+  left: 0;
 }
 /* RECIPE */
 @media (prefers-color-scheme: light) {

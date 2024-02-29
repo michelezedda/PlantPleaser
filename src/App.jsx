@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import React from "react";
 import Navbar from "./Navbar";
 import Home from "./Home";
+import Popular from "./Popular.jsx";
 import Footer from "./Footer.jsx";
 import axios from "axios";
 
@@ -17,7 +18,7 @@ function App() {
           params: {
             query: searchRecipe,
             diet: "vegan",
-            number: "9",
+            number: "4",
             apiKey: "9e0c96ea51a24d6d86010dbcabec905f",
           },
         }
@@ -36,6 +37,7 @@ function App() {
         handleSearch={handleSearch}
       />
       <Home searchResults={searchResults} />
+      <Popular />
       <Footer />
     </>
   );
