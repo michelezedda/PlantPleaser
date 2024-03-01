@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import myLogo from "/logo.png";
 import { FaSearch } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 function Navbar({ searchRecipe, setSearchRecipe, handleSearch }) {
   const handleChange = (e) => {
@@ -15,7 +16,9 @@ function Navbar({ searchRecipe, setSearchRecipe, handleSearch }) {
 
   return (
     <div className="navbar-container">
-      <img src={myLogo} alt="plantpleaser logo" />
+      <Link to="/">
+        <img src={myLogo} alt="plantpleaser logo" />
+      </Link>
       <form onSubmit={handleSubmit}>
         <input
           type="text"

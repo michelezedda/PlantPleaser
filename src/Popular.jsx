@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import Recipe from "./Recipe";
 
 function Popular() {
   const [randomRecipes, setRandomRecipes] = useState([]);
@@ -18,7 +19,7 @@ function Popular() {
         {
           params: {
             apiKey: myKey,
-            diet: "vegan, vegeterian",
+            diet: "vegan, vegetarian",
             number: "4",
           },
         }
@@ -45,8 +46,8 @@ function Popular() {
                 <img src={randomRecipe.image} alt={randomRecipe.title} />
                 <Link
                   to={`/recipe/${randomRecipe.id}`}
-                  ricetta
                   className="view-recipe-btn"
+                  onClick={() => handleViewRandomRecipe(randomRecipe)}
                 >
                   View Recipe
                 </Link>
@@ -54,41 +55,10 @@ function Popular() {
             ))}
           </div>
         </div>
-        {selectedRandomRecipe && (
-          <div className="full-recipe">
-            <h2>{selectedRandomRecipe.title}</h2>
-            <button onClick={() => setSelectedRandomRecipe(null)}>X</button>
-            <img
-              src={selectedRandomRecipe.image}
-              alt={selectedRandomRecipe.title}
-              onError={(event) => {
-                event.target.src = "default-pic.png";
-              }}
-            />
-            <p>
-              <b>Servings:</b> {selectedRandomRecipe.servings}{" "}
-            </p>
-            <p>
-              <b>Ready In:</b> {selectedRandomRecipe.readyInMinutes} minutes
-            </p>
-            <p>
-              <b>Diet:</b> {selectedRandomRecipe.diet}
-            </p>
-            <p>
-              <b>Ingredients:</b>{" "}
-              {selectedRandomRecipe.extendedIngredients
-                .map((ingredient) => ingredient.name)
-                .join(", ")}
-            </p>
-            <p>
-              <b>Instructions:</b>{" "}
-              {selectedRandomRecipe.instructions
-                ? selectedRandomRecipe.instructions
-                : "No instructions available"}
-            </p>
-          </div>
-        )}
       </div>
+      {selectedRandomRecipe && (
+        <Recipe selectedRandomRecipe={selectedRandomRecipe} />
+      )}
     </>
   );
 }

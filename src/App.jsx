@@ -19,7 +19,7 @@ function App() {
           params: {
             apiKey: myKey,
             query: searchRecipe,
-            diet: "vegan, vegeterian",
+            diet: "vegan, vegetarian",
             number: "4",
           },
         }
