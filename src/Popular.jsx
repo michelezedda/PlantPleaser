@@ -20,7 +20,7 @@ function Popular() {
           params: {
             apiKey: myKey,
             diet: "vegan, vegetarian",
-            number: "4",
+            number: "8",
           },
         }
       );
@@ -42,8 +42,14 @@ function Popular() {
           <div className="card-container">
             {randomRecipes.map((randomRecipe) => (
               <div className="card" key={randomRecipe.id}>
+                <img
+                  src={randomRecipe.image}
+                  alt={randomRecipe.title}
+                  onError={(event) => {
+                    event.target.src = "default-pic.png";
+                  }}
+                />
                 <h3>{randomRecipe.title}</h3>
-                <img src={randomRecipe.image} alt={randomRecipe.title} />
                 <Link
                   to={`/recipe/${randomRecipe.id}`}
                   className="view-recipe-btn"

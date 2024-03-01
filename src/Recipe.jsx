@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Navbar from "./Navbar";
+import Sidebar from "./Sidebar";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 
@@ -31,6 +32,7 @@ function Recipe() {
   return (
     <>
       <Navbar />
+      <Sidebar />
       {details && (
         <div className="full-recipe">
           <h2>{details.title}</h2>

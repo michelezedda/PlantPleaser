@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import React from "react";
+import Sidebar from "./Sidebar";
 import Navbar from "./Navbar";
-import Home from "./Home";
-import Popular from "./Popular.jsx";
-import Footer from "./Footer.jsx";
+import Results from "./Results";
+import Popular from "./Popular";
 import axios from "axios";
 
 function App() {
@@ -20,7 +20,7 @@ function App() {
             apiKey: myKey,
             query: searchRecipe,
             diet: "vegan, vegetarian",
-            number: "4",
+            number: "8",
           },
         }
       );
@@ -37,9 +37,9 @@ function App() {
         setSearchRecipe={setSearchRecipe}
         handleSearch={handleSearch}
       />
-      <Home searchResults={searchResults} />
+      <Sidebar />
+      <Results searchResults={searchResults} />
       <Popular />
-      <Footer />
     </>
   );
 }
