@@ -15,7 +15,7 @@ function App() {
     const myKey = import.meta.env.VITE_SOME_KEY;
     try {
       const response = await axios.get(
-        "https://api.spoonacular.com/recipes/search",
+        "https://api.spoonacular.com/recipes/complexSearch",
         {
           params: {
             apiKey: myKey,
