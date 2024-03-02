@@ -25,7 +25,7 @@ function App() {
           },
         }
       );
-      setSearchResults(response.data.results);
+      setSearchResults(response.data?.results || []);
     } catch (error) {
       console.error("Error fetching data", error);
     }
