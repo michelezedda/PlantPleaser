@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import Recipe from "./Recipe";
+import { LuVegan } from "react-icons/lu";
 
 function Popular(isVeg) {
   const [randomRecipes, setRandomRecipes] = useState([]);
@@ -37,26 +38,27 @@ function Popular(isVeg) {
   return (
     <>
       <div className="popular-container">
-        <h2>Popular Recipes</h2>
+        <h2>MOST POPULAR</h2>
         <div className="card-container">
           {randomRecipes.map((randomRecipe) => (
-            <div className="card" key={randomRecipe.id}>
-              <img
-                src={randomRecipe.image}
-                alt={randomRecipe.title}
-                onError={(event) => {
-                  event.target.src = "default-pic.png";
-                }}
-              />
-              <h4>{randomRecipe.title}</h4>
-              <Link
-                to={`/recipe/${randomRecipe.id}`}
-                className="view-recipe-btn"
-                onClick={() => handleViewRandomRecipe(randomRecipe)}
-              >
-                View Recipe
-              </Link>
-            </div>
+            <Link
+              to={`/recipe/${randomRecipe.id}`}
+              onClick={() => handleViewRandomRecipe(randomRecipe)}
+            >
+              <div className="card" key={randomRecipe.id}>
+                <img
+                  src={randomRecipe.image}
+                  alt={randomRecipe.title}
+                  onError={(event) => {
+                    event.target.src = "default-pic.png";
+                  }}
+                />
+                <h4>
+                  <LuVegan />
+                  &nbsp;{randomRecipe.title}
+                </h4>
+              </div>
+            </Link>
           ))}
         </div>
       </div>

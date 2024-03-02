@@ -1,24 +1,33 @@
 import { Link } from "react-router-dom";
+import { LuVegan } from "react-icons/lu";
 
-function Results({ searchResults }) {
+function Results({ searchResults, searchRecipe }) {
   return (
     <>
       <div className="search-result-container">
+        {(searchResults.length > 0 && (
+          <h2>
+            Your results for <em>{searchRecipe}</em>
+          </h2>
+        )) ||
+          ""}
         <div className="search-result">
           {searchResults.map((result) => (
-            <div className="result" key={result.id}>
-              <img
-                src={result.image}
-                alt={result.title}
-                onError={(event) => {
-                  event.target.src = "default-pic.png";
-                }}
-              />
-              <h4>{result.title}</h4>
-              <Link to={`/recipe/${result.id}`} className="view-recipe-btn">
-                View Recipe
-              </Link>
-            </div>
+            <Link to={`/recipe/${result.id}`}>
+              <div className="result" key={result.id}>
+                <img
+                  src={result.image}
+                  alt={result.title}
+                  onError={(event) => {
+                    event.target.src = "default-pic.png";
+                  }}
+                />
+                <h4>
+                  <LuVegan />
+                  &nbsp;{result.title}
+                </h4>
+              </div>
+            </Link>
           ))}
         </div>
       </div>

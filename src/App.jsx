@@ -21,7 +21,7 @@ function App() {
             apiKey: myKey,
             query: searchRecipe,
             diet: isVeg ? "vegan, vegetarian" : null,
-            number: "8",
+            number: "24",
           },
         }
       );
@@ -39,8 +39,8 @@ function App() {
         handleSearch={handleSearch}
       />
       <Sidebar />
-      <Results searchResults={searchResults} />
       <Popular isVeg={isVeg} />
+      <Results searchResults={searchResults} searchRecipe={searchRecipe} />
     </>
   );
 }

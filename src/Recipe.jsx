@@ -3,6 +3,7 @@ import Navbar from "./Navbar";
 import Sidebar from "./Sidebar";
 import { useParams } from "react-router-dom";
 import axios from "axios";
+import { LuVegan } from "react-icons/lu";
 
 function Recipe() {
   const [details, setDetails] = useState({});
@@ -41,42 +42,47 @@ function Recipe() {
       <Sidebar />
       {details && (
         <div className="full-recipe">
-          <h2>{details.title}</h2>
-          <img
-            src={details.image}
-            alt={details.title}
-            onError={(event) => {
-              event.target.src = "default-pic.png";
-            }}
-          />
-          <p>
-            <b>Servings:</b> {details.servings}{" "}
-          </p>
-          <p>
-            <b>Ready In:</b> {details.readyInMinutes} minutes
-          </p>
-          <p>
+          <div className="left-column">
+            <h2>
+              <LuVegan />
+              &nbsp;{details.title}
+            </h2>
+            <img
+              src={details.image}
+              alt={details.title}
+              onError={(event) => {
+                event.target.src = "default-pic.png";
+              }}
+            />
+          </div>
+          <div className="right-column">
+            <p>
+              <b>Servings:</b> {details.servings}{" "}
+            </p>
+            <p>
+              <b>Ready In:</b> {details.readyInMinutes} minutes
+            </p>
             <p>
               <b>Diet:</b>{" "}
               {details.diets
                 ? details.diets.join(", ")
                 : "No diet information available"}
             </p>
-          </p>
-          <p>
-            <b>Ingredients:</b>{" "}
-            {details.extendedIngredients
-              ? details.extendedIngredients
-                  .map((ingredient) => ingredient.name)
-                  .join(", ")
-              : "No ingredients information available"}
-          </p>
-          <p>
-            <b>Instructions:</b>{" "}
-            {details.instructions
-              ? stripHtml(details.instructions)
-              : "No instructions available"}
-          </p>
+            <p>
+              <b>Ingredients:</b>{" "}
+              {details.extendedIngredients
+                ? details.extendedIngredients
+                    .map((ingredient) => ingredient.name)
+                    .join(", ")
+                : "No ingredients information available"}
+            </p>
+            <p>
+              <b>Instructions:</b>{" "}
+              {details.instructions
+                ? stripHtml(details.instructions)
+                : "No instructions available"}
+            </p>
+          </div>
         </div>
       )}
     </>
