@@ -29,6 +29,12 @@ function Recipe() {
     fetchDetails();
   }, [params.id]);
 
+  const stripHtml = (html) => {
+    let temporalDivElement = document.createElement("div");
+    temporalDivElement.innerHTML = html;
+    return temporalDivElement.textContent || temporalDivElement.innerText || "";
+  };
+
   return (
     <>
       <Navbar />
@@ -68,7 +74,7 @@ function Recipe() {
           <p>
             <b>Instructions:</b>{" "}
             {details.instructions
-              ? details.instructions
+              ? stripHtml(details.instructions)
               : "No instructions available"}
           </p>
         </div>

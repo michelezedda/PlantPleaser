@@ -3,7 +3,7 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import Recipe from "./Recipe";
 
-function Popular() {
+function Popular(isVeg) {
   const [randomRecipes, setRandomRecipes] = useState([]);
   const [selectedRandomRecipe, setSelectedRandomRecipe] = useState(null);
 
@@ -19,7 +19,7 @@ function Popular() {
         {
           params: {
             apiKey: myKey,
-            diet: "vegan, vegetarian",
+            diet: isVeg ? "vegan, vegetarian" : null,
             number: "8",
           },
         }
@@ -36,30 +36,28 @@ function Popular() {
 
   return (
     <>
-      <div>
-        <div className="popular-container">
-          <h2>Popular Recipes</h2>
-          <div className="card-container">
-            {randomRecipes.map((randomRecipe) => (
-              <div className="card" key={randomRecipe.id}>
-                <img
-                  src={randomRecipe.image}
-                  alt={randomRecipe.title}
-                  onError={(event) => {
-                    event.target.src = "default-pic.png";
-                  }}
-                />
-                <h3>{randomRecipe.title}</h3>
-                <Link
-                  to={`/recipe/${randomRecipe.id}`}
-                  className="view-recipe-btn"
-                  onClick={() => handleViewRandomRecipe(randomRecipe)}
-                >
-                  View Recipe
-                </Link>
-              </div>
-            ))}
-          </div>
+      <div className="popular-container">
+        <h2>Popular Recipes</h2>
+        <div className="card-container">
+          {randomRecipes.map((randomRecipe) => (
+            <div className="card" key={randomRecipe.id}>
+              <img
+                src={randomRecipe.image}
+                alt={randomRecipe.title}
+                onError={(event) => {
+                  event.target.src = "default-pic.png";
+                }}
+              />
+              <h4>{randomRecipe.title}</h4>
+              <Link
+                to={`/recipe/${randomRecipe.id}`}
+                className="view-recipe-btn"
+                onClick={() => handleViewRandomRecipe(randomRecipe)}
+              >
+                View Recipe
+              </Link>
+            </div>
+          ))}
         </div>
       </div>
       {selectedRandomRecipe && (

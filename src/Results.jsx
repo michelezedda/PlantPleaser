@@ -14,7 +14,7 @@ function Results({ searchResults }) {
                   event.target.src = "default-pic.png";
                 }}
               />
-              <h3>{result.title}</h3>
+              <h4>{result.title}</h4>
               <Link to={`/recipe/${result.id}`} className="view-recipe-btn">
                 View Recipe
               </Link>

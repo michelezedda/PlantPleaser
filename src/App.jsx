@@ -9,6 +9,7 @@ import axios from "axios";
 function App() {
   const [searchRecipe, setSearchRecipe] = useState("");
   const [searchResults, setSearchResults] = useState([]);
+  const [isVeg, setIsVeg] = useState(true);
 
   const handleSearch = async () => {
     const myKey = import.meta.env.VITE_SOME_KEY;
@@ -19,7 +20,7 @@ function App() {
           params: {
             apiKey: myKey,
             query: searchRecipe,
-            diet: "vegan, vegetarian",
+            diet: isVeg ? "vegan, vegetarian" : null,
             number: "8",
           },
         }
@@ -39,7 +40,7 @@ function App() {
       />
       <Sidebar />
       <Results searchResults={searchResults} />
-      <Popular />
+      <Popular isVeg={isVeg} />
     </>
   );
 }
