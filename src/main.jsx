@@ -5,8 +5,15 @@ import "./index.css";
 
 import App from "./App.jsx";
 import Recipe from "./Recipe.jsx";
-import Appetizer from "./Appetizer.jsx";
 import NotFoundPage from "./NotFoundPage.jsx";
+import Appetizer from "./Appetizer.jsx";
+import MainCourse from "./MainCourse.jsx";
+import SideDish from "./SideDish.jsx";
+import Fingerfood from "./Fingerfood.jsx";
+import Snack from "./Snack.jsx";
+import Salad from "./Salad.jsx";
+import Dessert from "./Dessert.jsx";
+import Beverage from "./Beverage.jsx";
 
 const router = createBrowserRouter([
   {
@@ -21,6 +28,34 @@ const router = createBrowserRouter([
   {
     path: "/appetizer",
     element: <Appetizer />,
+  },
+  {
+    path: "/maincourse",
+    element: <MainCourse />,
+  },
+  {
+    path: "/sidedish",
+    element: <SideDish />,
+  },
+  {
+    path: "/fingerfood",
+    element: <Fingerfood />,
+  },
+  {
+    path: "/snack",
+    element: <Snack />,
+  },
+  {
+    path: "/salad",
+    element: <Salad />,
+  },
+  {
+    path: "/dessert",
+    element: <Dessert />,
+  },
+  {
+    path: "/beverage",
+    element: <Beverage />,
   },
 ]);
 

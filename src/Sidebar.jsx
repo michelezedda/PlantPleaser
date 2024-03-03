@@ -41,9 +41,6 @@ function Sidebar() {
             <Link to="/snack">
               <li>snack</li>
             </Link>
-            <Link to="/bread">
-              <li>beverage</li>
-            </Link>
             <Link to="/salad">
               <li>salad</li>
             </Link>

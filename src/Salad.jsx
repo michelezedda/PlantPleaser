@@ -6,7 +6,7 @@ import leafBg from "/leafbg.png";
 import Sidebar from "./Sidebar";
 import Navbar from "./Navbar";
 
-function Appetizer(isVeg) {
+function Salad(isVeg) {
   const [appetizerRecipes, setAppetizerRecipes] = useState([]);
 
   const fetchAppetizerRecipes = async () => {
@@ -18,7 +18,7 @@ function Appetizer(isVeg) {
           params: {
             apiKey: myKey,
             diet: isVeg ? "vegan, vegetarian" : "",
-            type: "appetizer",
+            type: "salad",
             number: "21",
           },
         }
@@ -66,4 +66,4 @@ function Appetizer(isVeg) {
   );
 }
 
-export default Appetizer;
+export default Salad;
