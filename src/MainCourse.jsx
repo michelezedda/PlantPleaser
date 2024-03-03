@@ -38,7 +38,7 @@ function MainCourse(isVeg) {
       <Navbar />
       <Sidebar />
       <div className="categories-container">
-        <h2>MOST POPULAR</h2>
+        <h2>MAIN COURSE</h2>
         <div className="categories-result">
           {appetizerRecipes.map((appetizerRecipe) => (
             <Link to={`/recipe/${appetizerRecipe.id}`}>
