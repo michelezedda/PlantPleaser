@@ -4,6 +4,7 @@ import Sidebar from "./Sidebar";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import { LuVegan } from "react-icons/lu";
+import leafBg from "/leafbg.png";
 
 function Recipe() {
   const [details, setDetails] = useState({});
@@ -85,6 +86,9 @@ function Recipe() {
           </div>
         </div>
       )}
+      <div className="big-leaf-bg">
+        <img src={leafBg} />
+      </div>
     </>
   );
 }

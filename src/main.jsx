@@ -5,6 +5,7 @@ import "./index.css";
 
 import App from "./App.jsx";
 import Recipe from "./Recipe.jsx";
+import Appetizer from "./Appetizer.jsx";
 import NotFoundPage from "./NotFoundPage.jsx";
 
 const router = createBrowserRouter([
@@ -16,6 +17,10 @@ const router = createBrowserRouter([
   {
     path: "/recipe/:id",
     element: <Recipe />,
+  },
+  {
+    path: "/appetizer",
+    element: <Appetizer />,
   },
 ]);
 

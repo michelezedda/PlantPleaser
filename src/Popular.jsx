@@ -20,7 +20,7 @@ function Popular(isVeg) {
         {
           params: {
             apiKey: myKey,
-            diet: isVeg ? "vegan, vegetarian" : null,
+            diet: isVeg ? "vegan, vegetarian" : "",
             number: "8",
           },
         }

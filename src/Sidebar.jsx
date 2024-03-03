@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { TbLayoutSidebarRightCollapseFilled } from "react-icons/tb";
 import { TbLayoutSidebarRightExpandFilled } from "react-icons/tb";
+import { Link } from "react-router-dom";
 
 function Sidebar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,23 +22,37 @@ function Sidebar() {
         </button>
         <div className="select-menu">
           <ul>
-            <li>
-              <b>HOME</b>
-            </li>
+            <Link to="/">
+              <li>HOME</li>
+            </Link>
             <br />
-            <li onClick={() => handleCategoryClick("appetizer")}>appetizer</li>
-            <li onClick={() => handleCategoryClick("main course")}>
-              main course
-            </li>
-            <li onClick={() => handleCategoryClick("side dish")}>side dish</li>
-            <li onClick={() => handleCategoryClick("fingerfood")}>
-              fingerfood
-            </li>
-            <li onClick={() => handleCategoryClick("snack")}>snack</li>
-            <li onClick={() => handleCategoryClick("bread")}>bread</li>
-            <li onClick={() => handleCategoryClick("salad")}>salad</li>
-            <li onClick={() => handleCategoryClick("dessert")}>dessert</li>
-            <li onClick={() => handleCategoryClick("beverage")}>beverage</li>
+            <Link to="/appetizer">
+              <li>appetizer</li>
+            </Link>
+            <Link to="/maincourse">
+              <li>main course</li>
+            </Link>
+            <Link to="/sideDish">
+              <li>side dish</li>
+            </Link>
+            <Link to="/fingerfood">
+              <li>fingerfood</li>
+            </Link>
+            <Link to="/snack">
+              <li>snack</li>
+            </Link>
+            <Link to="/bread">
+              <li>beverage</li>
+            </Link>
+            <Link to="/salad">
+              <li>salad</li>
+            </Link>
+            <Link to="/dessert">
+              <li>dessert</li>
+            </Link>
+            <Link to="/beverage">
+              <li>beverage</li>
+            </Link>
           </ul>
         </div>
       </div>

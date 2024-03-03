@@ -5,6 +5,7 @@ import Navbar from "./Navbar";
 import Results from "./Results";
 import Popular from "./Popular";
 import axios from "axios";
+import leafBg from "/leafbg.png";
 
 function App() {
   const [searchRecipe, setSearchRecipe] = useState("");
@@ -20,8 +21,8 @@ function App() {
           params: {
             apiKey: myKey,
             query: searchRecipe,
-            diet: isVeg ? "vegan, vegetarian" : null,
-            number: "24",
+            diet: isVeg ? "vegan, vegetarian" : "",
+            number: "21",
           },
         }
       );
@@ -41,6 +42,9 @@ function App() {
       <Sidebar />
       <Popular isVeg={isVeg} />
       <Results searchResults={searchResults} searchRecipe={searchRecipe} />
+      <div className="leaf-bg">
+        <img src={leafBg} />
+      </div>
     </>
   );
 }
