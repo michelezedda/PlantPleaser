@@ -216,7 +216,7 @@ input:focus {
   transition: background 0.5s, transform 0.5s;
 }
 .card:hover {
-  background-color: #fff2d0b4;
+  background-color: #efffd0b4;
   transform: translateY(-10px);
 }
 .card h4 {
@@ -257,7 +257,7 @@ input:focus {
   transition: background 0.5s, transform 0.5s;
 }
 .result:hover {
-  background-color: #fff2d0b4;
+  background-color: #efffd0b4;
   transform: translateY(-10px);
 }
 .result h4 {
@@ -345,7 +345,7 @@ input:focus {
   transition: background 0.5s, transform 0.5s;
 }
 .category-result:hover {
-  background-color: #fff2d0b4;
+  background-color: #efffd0b4;
   transform: translateY(-10px);
 }
 .category-result h4 {

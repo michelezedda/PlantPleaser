@@ -6,7 +6,6 @@ import "./index.css";
 import App from "./App.jsx";
 import Recipe from "./Recipe.jsx";
 import NotFoundPage from "./NotFoundPage.jsx";
-import Vegan from "./Vegan.jsx";
 import Appetizer from "./Appetizer.jsx";
 import MainCourse from "./MainCourse.jsx";
 import SideDish from "./SideDish.jsx";
@@ -25,10 +24,6 @@ const router = createBrowserRouter([
   {
     path: "/recipe/:id",
     element: <Recipe />,
-  },
-  {
-    path: "/vegan",
-    element: <Vegan />,
   },
   {
     path: "/appetizer",
