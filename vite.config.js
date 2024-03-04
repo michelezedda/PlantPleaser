@@ -8,6 +8,6 @@ export default defineConfig({
     "process.env.VITE_SOME_KEY": JSON.stringify(process.env.VITE_SOME_KEY),
   },
   build: {
-    outDir: "dist",
+    outDir: "build",
   },
 });
