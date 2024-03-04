@@ -141,7 +141,7 @@ input:focus {
   transition: margin-left 0.3s ease;
 }
 .sidebar-container.open ~ .full-recipe {
-  margin-left: 700px;
+  margin-left: 400px;
   transition: margin-left 0.3s ease;
 }
 .sidebar-container.open ~ .not-found-container {
@@ -156,6 +156,7 @@ input:focus {
 .sidebar-container li {
   margin-bottom: 20px;
   font-size: 20px;
+  font-weight: 400;
   cursor: pointer;
 }
 .sidebar-container li:hover {
@@ -251,14 +252,14 @@ input:focus {
 /* RECIPE */
 .full-recipe {
   display: flex;
-  margin: 200px 500px 70px 500px;
+  width: 70%;
+  margin: 200px 150px 70px 300px;
   border: #074506 3px solid;
   border-radius: 20px;
   padding: 20px;
   background-color: #3e9c3c43;
 }
 .left-column {
-  flex: 0 0 auto;
   margin-right: 50px;
   border: #086506 3px solid;
   border-radius: 20px;
@@ -270,7 +271,6 @@ input:focus {
   border: #086506 3px solid;
   border-radius: 20px;
   padding: 20px;
-  flex: 1;
   background-color: #fdffed;
 }
 .full-recipe h2 {
