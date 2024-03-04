@@ -6,9 +6,8 @@ import leafBg from "/leafbg.png";
 import Sidebar from "./Sidebar";
 import Navbar from "./Navbar";
 
-function Dessert({ isVeg }) {
+function Dessert() {
   const [categoryRecipes, setCategoryRecipes] = useState([]);
-
   const fetchCategoryRecipes = async () => {
     const myKey = import.meta.env.VITE_SOME_KEY;
     try {
@@ -17,8 +16,7 @@ function Dessert({ isVeg }) {
         {
           params: {
             apiKey: myKey,
-            diet: isVeg ? "vegan, vegetarian" : "",
-            type: "dessert",
+            tags: "vegan, vegetarian, dessert",
             number: "21",
           },
         }

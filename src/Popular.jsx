@@ -1,10 +1,9 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import Recipe from "./Recipe";
 import { LuVegan } from "react-icons/lu";
 
-function Popular(isVeg) {
+function Popular() {
   const [randomRecipes, setRandomRecipes] = useState([]);
   const [selectedRandomRecipe, setSelectedRandomRecipe] = useState(null);
 
@@ -20,7 +19,7 @@ function Popular(isVeg) {
         {
           params: {
             apiKey: myKey,
-            diet: isVeg ? "vegan, vegetarian" : "",
+            tags: "vegan, vegetarian",
             number: "8",
           },
         }

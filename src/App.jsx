@@ -10,7 +10,6 @@ import leafBg from "/leafbg.png";
 function App() {
   const [searchRecipe, setSearchRecipe] = useState("");
   const [searchResults, setSearchResults] = useState([]);
-  const [isVeg, setIsVeg] = useState(true);
 
   const handleSearch = async () => {
     const myKey = import.meta.env.VITE_SOME_KEY;
@@ -21,7 +20,7 @@ function App() {
           params: {
             apiKey: myKey,
             query: searchRecipe,
-            diet: isVeg ? "vegan, vegetarian" : "",
+            tags: "vegan, vegetarian",
             number: "21",
           },
         }
@@ -40,7 +39,7 @@ function App() {
         handleSearch={handleSearch}
       />
       <Sidebar />
-      <Popular isVeg={isVeg} />
+      <Popular />
       <Results searchResults={searchResults} searchRecipe={searchRecipe} />
       <div className="leaf-bg">
         <img src={leafBg} />

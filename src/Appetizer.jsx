@@ -6,7 +6,7 @@ import leafBg from "/leafbg.png";
 import Sidebar from "./Sidebar";
 import Navbar from "./Navbar";
 
-function Appetizer({ isVeg }) {
+function Appetizer() {
   const [categoryRecipes, setCategoryRecipes] = useState([]);
 
   const fetchCategoryRecipes = async () => {
@@ -17,8 +17,7 @@ function Appetizer({ isVeg }) {
         {
           params: {
             apiKey: myKey,
-            diet: isVeg ? "vegan, vegetarian" : "",
-            type: "appetizer",
+            tags: "vegan, vegetarian, appetizer",
             number: "21",
           },
         }
@@ -38,7 +37,7 @@ function Appetizer({ isVeg }) {
       <Navbar />
       <Sidebar />
       <div className="categories-container">
-        <h2>DESSERT</h2>
+        <h2>APPETIZER</h2>
         <div className="categories-result">
           {categoryRecipes.map((categoryRecipe) => (
             <Link to={`/recipe/${categoryRecipe.id}`}>
