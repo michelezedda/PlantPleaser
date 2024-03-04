@@ -6,10 +6,10 @@ import leafBg from "/leafbg.png";
 import Sidebar from "./Sidebar";
 import Navbar from "./Navbar";
 
-function Salad(isVeg) {
-  const [appetizerRecipes, setAppetizerRecipes] = useState([]);
+function Salad({ isVeg }) {
+  const [categoryRecipes, setCategoryRecipes] = useState([]);
 
-  const fetchAppetizerRecipes = async () => {
+  const fetchCategoryRecipes = async () => {
     const myKey = import.meta.env.VITE_SOME_KEY;
     try {
       const response = await axios.get(
@@ -23,14 +23,14 @@ function Salad(isVeg) {
           },
         }
       );
-      setAppetizerRecipes(response.data?.recipes || []);
+      setCategoryRecipes(response.data?.recipes || []);
     } catch (error) {
       console.error("Error fetching data:", error);
     }
   };
 
   useEffect(() => {
-    fetchAppetizerRecipes();
+    fetchCategoryRecipes();
   }, []);
 
   return (
@@ -38,21 +38,21 @@ function Salad(isVeg) {
       <Navbar />
       <Sidebar />
       <div className="categories-container">
-        <h2>SALAD</h2>
+        <h2>DESSERT</h2>
         <div className="categories-result">
-          {appetizerRecipes.map((appetizerRecipe) => (
-            <Link to={`/recipe/${appetizerRecipe.id}`}>
-              <div className="category-result" key={appetizerRecipe.id}>
+          {categoryRecipes.map((categoryRecipe) => (
+            <Link to={`/recipe/${categoryRecipe.id}`}>
+              <div className="category-result" key={categoryRecipe.id}>
                 <img
-                  src={appetizerRecipe.image}
-                  alt={appetizerRecipe.title}
+                  src={categoryRecipe.image}
+                  alt={categoryRecipe.title}
                   onError={(event) => {
                     event.target.src = "default-pic.png";
                   }}
                 />
                 <h4>
                   <LuVegan />
-                  &nbsp;{appetizerRecipe.title}
+                  &nbsp;{categoryRecipe.title}
                 </h4>
               </div>
             </Link>

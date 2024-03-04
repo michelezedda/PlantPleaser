@@ -26,6 +26,9 @@ function Sidebar() {
               <li>HOME</li>
             </Link>
             <br />
+            <Link to="/vegan">
+              <li>vegan</li>
+            </Link>
             <Link to="/appetizer">
               <li>appetizer</li>
             </Link>

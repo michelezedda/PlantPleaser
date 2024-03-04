@@ -62,9 +62,6 @@ function Popular(isVeg) {
           ))}
         </div>
       </div>
-      {selectedRandomRecipe && (
-        <Recipe selectedRandomRecipe={selectedRandomRecipe} />
-      )}
     </>
   );
 }

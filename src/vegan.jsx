@@ -6,7 +6,7 @@ import leafBg from "/leafbg.png";
 import Sidebar from "./Sidebar";
 import Navbar from "./Navbar";
 
-function Snack({ isVeg }) {
+function Vegan({ isVeg }) {
   const [categoryRecipes, setCategoryRecipes] = useState([]);
 
   const fetchCategoryRecipes = async () => {
@@ -17,8 +17,7 @@ function Snack({ isVeg }) {
         {
           params: {
             apiKey: myKey,
-            diet: isVeg ? "vegan, vegetarian" : "",
-            type: "snack",
+            diet: isVeg ? "vegan" : "",
             number: "21",
           },
         }
@@ -66,4 +65,4 @@ function Snack({ isVeg }) {
   );
 }
 
-export default Snack;
+export default Vegan;
