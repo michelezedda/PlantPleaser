@@ -1,20 +1,20 @@
 <h1 align="center">
   <br>
-    <img src="https://i.ibb.co/2g96FD0/Black-and-Gold-Classy-Minimalist-Circular-Name-Logo-1-removebg-preview.png" width="400">
+    <img src="https://plantpleaser.netlify.app/logo.png" width="400">
   <br>
-  ListPlanner
+  plantpleaser
   <br>
 </h1>
 
-<h2 align="center">Organize tasks effortlessly</h2>
+<h2 align="center">Unlock a world of delicious vegetarian possibilities</h2>
 
 ## Key Features
 
-- Add Button: The "Add" button allows users to quickly input new tasks to their to-do list;
+- Navbar: Enables users to quickly search for recipes by keywords, ingredients, or recipe titles.
 
-- Remove Button: With the "Remove" button, users can effortlessly delete tasks they no longer need;
-
-- Move Up and Move Down Buttons: The "Move Up" and "Move Down" buttons allow users to reposition tasks within the list with ease. Whether you need to prioritize certain tasks or group related tasks together, ListPlanner makes it simple to adjust the order of your to-do list items.
+- Sidebar: Allows users to easily navigate through different categories to discover recipes that match their preferences.
+ 
+- Recipe View: Displays detailed information about the selected recipe, including ingredients, cooking instructions, preparation time, serving size and an image of the recipe to give users a visual representation of the final dish.
 
 
 ## Technologies Used
@@ -27,8 +27,10 @@
 - Node.js: Fast, scalable server-side JavaScript runtime for real-time applications and APIs;
 - React: A JavaScript library for building dynamic user interfaces, known for its component-based approach and efficient rendering;
 - Vite: A next-generation front-end dev tool, aiming to improve the developer experience of webpack when it comes to developing JavaScript applications.
+- Axios: JavaScript library for easy HTTP requests, featuring promises, interceptors, JSON parsing, and request cancellation.
+- Spoonacular API: provides access to a rich database of recipes, ingredients, and nutrition information, enabling the creation of applications for cooking, meal planning, and nutrition tracking.
 
 ## Project Link
 
-You can try ListPlanner by clicking the following link :link: [ListPlanner](https://listplanner.netlify.app/) <br/>
-[![Netlify Status](https://api.netlify.com/api/v1/badges/488b63d3-858b-4363-b83b-03384cf673c2/deploy-status)](https://app.netlify.com/sites/listplanner/deploys)
+You can try plantpleaser by clicking the following link :link: [plantpleaser](https://plantpleaser.netlify.app/) <br/>
+[![Netlify Status](https://api.netlify.com/api/v1/badges/d0b26866-ac5a-48d8-a830-9f9be2fb53d8/deploy-status)](https://app.netlify.com/sites/plantpleaser/deploys)
