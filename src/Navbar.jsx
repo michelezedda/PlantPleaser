@@ -15,22 +15,41 @@ function Navbar({ searchRecipe, setSearchRecipe, handleSearch }) {
   };
 
   return (
-    <div className="navbar-container">
-      <Link to="/">
-        <img src={myLogo} alt="plantpleaser logo" />
-      </Link>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          value={searchRecipe}
-          onChange={handleChange}
-          placeholder="search for a recipe"
-        />
-        <button type="submit" className="search-btn" onClick={handleSubmit}>
-          <FaSearch />
-        </button>
-      </form>
-    </div>
+    <>
+      <div id="leaves">
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+      </div>
+      <div className="navbar-container">
+        <Link to="/">
+          <img src={myLogo} alt="plantpleaser logo" />
+        </Link>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="text"
+            value={searchRecipe}
+            onChange={handleChange}
+            placeholder="search for a recipe"
+          />
+          <button type="submit" className="search-btn" onClick={handleSubmit}>
+            <FaSearch />
+          </button>
+        </form>
+      </div>
+    </>
   );
 }
 

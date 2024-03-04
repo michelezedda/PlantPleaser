@@ -4,11 +4,30 @@ import { Link } from "react-router-dom";
 
 function JustLogo() {
   return (
-    <div className="justlogo-container">
-      <Link to="/">
-        <img src={myLogo} alt="plantpleaser logo" />
-      </Link>
-    </div>
+    <>
+      <div id="leaves">
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+      </div>
+      <div className="justlogo-container">
+        <Link to="/">
+          <img src={myLogo} alt="plantpleaser logo" />
+        </Link>
+      </div>
+    </>
   );
 }
 export default JustLogo;
