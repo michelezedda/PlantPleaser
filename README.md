@@ -10,7 +10,11 @@
 
 ## Key Features
 
-- 
+- Navbar: Enables users to quickly search for recipes by keywords, ingredients, or recipe titles.
+
+- Sidebar: Allows users to easily navigate through different categories to discover recipes that match their preferences.
+ 
+- Recipe View: Displays detailed information about the selected recipe, including ingredients, cooking instructions, preparation time, serving size and an image of the recipe to give users a visual representation of the final dish.
 
 
 ## Technologies Used
