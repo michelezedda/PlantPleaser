@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { LuVegan } from "react-icons/lu";
 import leafBg from "/leafbg.png";
 import Sidebar from "./Sidebar";
-import Navbar from "./Navbar";
+import JustLogo from "./JustLogo";
 
 function Appetizer() {
   const [categoryRecipes, setCategoryRecipes] = useState([]);
@@ -34,7 +34,7 @@ function Appetizer() {
 
   return (
     <>
-      <Navbar />
+      <JustLogo />
       <Sidebar />
       <div className="categories-container">
         <h2>APPETIZER</h2>

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Navbar from "./Navbar";
+import JustLogo from "./JustLogo";
 import Sidebar from "./Sidebar";
 import { useParams } from "react-router-dom";
 import axios from "axios";
@@ -39,7 +39,7 @@ function Recipe() {
 
   return (
     <>
-      <Navbar />
+      <JustLogo />
       <Sidebar />
       {details && (
         <div className="full-recipe">

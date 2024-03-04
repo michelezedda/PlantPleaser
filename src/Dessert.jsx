@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { LuVegan } from "react-icons/lu";
 import leafBg from "/leafbg.png";
 import Sidebar from "./Sidebar";
-import Navbar from "./Navbar";
+import JustLogo from "./JustLogo";
 
 function Dessert() {
   const [categoryRecipes, setCategoryRecipes] = useState([]);
@@ -33,7 +33,7 @@ function Dessert() {
 
   return (
     <>
-      <Navbar />
+      <JustLogo />
       <Sidebar />
       <div className="categories-container">
         <h2>DESSERT</h2>

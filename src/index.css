@@ -64,6 +64,25 @@ input:focus {
 .big-leaf-bg img {
   width: 500px;
 }
+/* JUSTLOGO */
+.justlogo-container {
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  padding: 0 100px;
+  z-index: 100;
+  border-bottom: #00000025 1px solid;
+  border-left: #00000025 1px solid;
+}
+.justlogo-container img {
+  height: 100px;
+}
 /* NAVBAR */
 .navbar-container {
   background-color: #ffffff;

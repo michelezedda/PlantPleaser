@@ -26,11 +26,9 @@ function Navbar({ searchRecipe, setSearchRecipe, handleSearch }) {
           onChange={handleChange}
           placeholder="search for a recipe"
         />
-        <Link to="/results">
-          <button type="submit" className="search-btn" onClick={handleSubmit}>
-            <FaSearch />
-          </button>
-        </Link>
+        <button type="submit" className="search-btn" onClick={handleSubmit}>
+          <FaSearch />
+        </button>
       </form>
     </div>
   );
