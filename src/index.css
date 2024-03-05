@@ -362,6 +362,7 @@ input:focus {
   top: -50px;
   width: 100%;
   text-align: right;
+  z-index: -1;
 }
 #leaves i {
   display: inline-block;
