@@ -36,23 +36,6 @@ function Navbar({ searchRecipe, setSearchRecipe, handleSearch }) {
           </form>
         </div>
       </div>
-      <div id="leaves">
-        <i></i>
-        <i></i>
-        <i></i>
-        <i></i>
-        <i></i>
-        <i></i>
-        <i></i>
-        <i></i>
-        <i></i>
-        <i></i>
-        <i></i>
-        <i></i>
-        <i></i>
-        <i></i>
-        <i></i>
-      </div>
     </>
   );
 }
