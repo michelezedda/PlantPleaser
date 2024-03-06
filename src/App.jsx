@@ -39,12 +39,12 @@ function App() {
         handleSearch={handleSearch}
       />
       <Sidebar />
-      <Popular />
       <Results
         searchResults={searchResults}
         setSearchResults={setSearchResults}
         searchRecipe={searchRecipe}
       />
+      <Popular />
       <div className="leaf-bg">
         <img src={leafBg} />
       </div>
