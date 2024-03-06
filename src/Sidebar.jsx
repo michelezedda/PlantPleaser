@@ -26,28 +26,28 @@ function Sidebar() {
               <li>HOME</li>
             </Link>
             <br />
-            <Link to="/appetizer">
+            <Link to="/category/appetizer">
               <li>appetizer</li>
             </Link>
-            <Link to="/maincourse">
+            <Link to="/category/main%20course">
               <li>main course</li>
             </Link>
-            <Link to="/sideDish">
+            <Link to="/category/side%20dish">
               <li>side dish</li>
             </Link>
-            <Link to="/fingerfood">
+            <Link to="/category/fingerfood">
               <li>fingerfood</li>
             </Link>
-            <Link to="/snack">
+            <Link to="/category/snack">
               <li>snack</li>
             </Link>
-            <Link to="/salad">
+            <Link to="/category/salad">
               <li>salad</li>
             </Link>
-            <Link to="/dessert">
+            <Link to="/category/dessert">
               <li>dessert</li>
             </Link>
-            <Link to="/beverage">
+            <Link to="/category/beverage">
               <li>beverage</li>
             </Link>
           </ul>

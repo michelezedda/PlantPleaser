@@ -1,13 +1,15 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { LuVegan } from "react-icons/lu";
 import leafBg from "/leafbg.png";
-import Sidebar from "./Sidebar";
 import JustLogo from "./JustLogo";
+import Sidebar from "./Sidebar";
 
-function Dessert() {
+function Category() {
   const [categoryRecipes, setCategoryRecipes] = useState([]);
+  const { category } = useParams();
+
   const fetchCategoryRecipes = async () => {
     const myKey = import.meta.env.VITE_SOME_KEY;
     try {
@@ -16,7 +18,7 @@ function Dessert() {
         {
           params: {
             apiKey: myKey,
-            tags: "vegan, vegetarian, dessert",
+            tags: `vegan, vegetarian, ${category}`,
             number: "21",
           },
         }
@@ -29,18 +31,18 @@ function Dessert() {
 
   useEffect(() => {
     fetchCategoryRecipes();
-  }, []);
+  }, [category]);
 
   return (
     <>
-      <JustLogo />
       <Sidebar />
+      <JustLogo />
       <div className="categories-container">
-        <h2>DESSERT</h2>
+        <h2>{category.toUpperCase()}</h2>
         <div className="categories-result">
           {categoryRecipes.map((categoryRecipe) => (
-            <Link to={`/recipe/${categoryRecipe.id}`}>
-              <div className="category-result" key={categoryRecipe.id}>
+            <Link to={`/recipe/${categoryRecipe.id}`} key={categoryRecipe.id}>
+              <div className="category-result">
                 <img
                   src={categoryRecipe.image}
                   alt={categoryRecipe.title}
@@ -58,10 +60,10 @@ function Dessert() {
         </div>
       </div>
       <div className="leaf-bg">
-        <img src={leafBg} />
+        <img src={leafBg} alt="leaf background" />
       </div>
     </>
   );
 }
 
-export default Dessert;
+export default Category;
