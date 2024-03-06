@@ -34,6 +34,25 @@ function Popular() {
     fetchRandomRecipes();
   }, []);
 
+  const loadMoreRandomRecipes = async () => {
+    const myKey = import.meta.env.VITE_SOME_KEY;
+    try {
+      const response = await axios.get(
+        `https://api.spoonacular.com/recipes/random`,
+        {
+          params: {
+            apiKey: myKey,
+            tags: "vegan, vegetarian",
+            number: "10",
+          },
+        }
+      );
+      setRandomRecipes([...randomRecipes, ...(response.data?.recipes || [])]);
+    } catch (error) {
+      console.error("Error fetching more data:", error);
+    }
+  };
+
   return (
     <>
       <div className="popular-container">
@@ -43,8 +62,9 @@ function Popular() {
             <Link
               to={`/recipe/${randomRecipe.id}`}
               onClick={() => handleViewRandomRecipe(randomRecipe)}
+              key={randomRecipe.id}
             >
-              <div className="card" key={randomRecipe.id}>
+              <div className="card">
                 <img
                   src={randomRecipe.image}
                   alt={randomRecipe.title}
@@ -59,6 +79,9 @@ function Popular() {
               </div>
             </Link>
           ))}
+          <div className="card" id="load-more" onClick={loadMoreRandomRecipes}>
+            <h4>Load More Recipes</h4>
+          </div>
         </div>
       </div>
     </>

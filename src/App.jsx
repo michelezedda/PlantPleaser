@@ -40,7 +40,11 @@ function App() {
       />
       <Sidebar />
       <Popular />
-      <Results searchResults={searchResults} searchRecipe={searchRecipe} />
+      <Results
+        searchResults={searchResults}
+        setSearchResults={setSearchResults}
+        searchRecipe={searchRecipe}
+      />
       <div className="leaf-bg">
         <img src={leafBg} />
       </div>
