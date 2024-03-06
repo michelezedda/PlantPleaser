@@ -531,6 +531,13 @@ input:focus {
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
   }
+  .card img {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+  }
   /* RESULTS */
   .search-result-container {
     margin: 0;
