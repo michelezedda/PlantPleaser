@@ -57,6 +57,42 @@ input:focus {
 .big-leaf-bg img {
   width: 500px;
 }
+#load-more {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  box-shadow: 4px 4px 4px #116e273d;
+  width: 100%;
+  transition: background 0.5s, transform 0.5s;
+  height: 220px;
+  overflow: hidden;
+  background-image: url("default-pic.png");
+  background-size: cover;
+  background-position: center;
+}
+#load-more h4 {
+  font-size: 20px;
+  left: 50%;
+  bottom: 50%;
+  color: #214724;
+  z-index: 2;
+}
+#load-more::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  z-index: 1;
+}
+#load-more:hover {
+  transform: translateY(-10px);
+}
 /* JUSTLOGO */
 .justlogo-container {
   background-color: #ffffff;

@@ -33,6 +33,28 @@ function Category() {
     fetchCategoryRecipes();
   }, [category]);
 
+  const loadMoreCategoryRecipes = async () => {
+    const myKey = import.meta.env.VITE_SOME_KEY;
+    try {
+      const response = await axios.get(
+        `https://api.spoonacular.com/recipes/random`,
+        {
+          params: {
+            apiKey: myKey,
+            tags: `vegan, vegetarian, ${category}`,
+            number: "10",
+          },
+        }
+      );
+      setCategoryRecipes([
+        ...categoryRecipes,
+        ...(response.data?.recipes || []),
+      ]);
+    } catch (error) {
+      console.error("Error fetching more data:", error);
+    }
+  };
+
   return (
     <>
       <Sidebar />
@@ -57,6 +79,13 @@ function Category() {
               </div>
             </Link>
           ))}
+          <div
+            className="card"
+            id="load-more"
+            onClick={loadMoreCategoryRecipes}
+          >
+            <h4>Load More Recipes</h4>
+          </div>
         </div>
       </div>
       <div className="leaf-bg">
