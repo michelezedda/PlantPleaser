@@ -55,7 +55,7 @@ input:focus {
   z-index: -1;
 }
 .big-leaf-bg img {
-  width: 500px;
+  width: 300px;
 }
 #load-more {
   position: relative;
@@ -154,12 +154,12 @@ input:focus {
   }
   .big-leaf-bg {
     position: fixed;
-    bottom: 0;
-    right: 50%;
+    bottom: -2;
+    right: 20%;
     transform: translate(30%);
     z-index: -1;
   }
   .big-leaf-bg img {
-    width: 700px;
+    width: 500px;
   }
 }

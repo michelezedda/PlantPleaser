@@ -4,6 +4,7 @@ import Sidebar from "../src/components/Sidebar";
 import Navbar from "../src/components/Navbar";
 import Results from "../src/pages/Results";
 import Popular from "../src/pages/Popular";
+import MostRated from "../src/pages/MostRated";
 import axios from "axios";
 import leafBg from "/leafbg.png";
 
@@ -45,6 +46,7 @@ function App() {
         searchRecipe={searchRecipe}
       />
       <Popular />
+      <MostRated />
       <div className="leaf-bg">
         <img src={leafBg} />
       </div>

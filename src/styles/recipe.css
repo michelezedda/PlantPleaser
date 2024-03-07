@@ -3,21 +3,22 @@
   width: 70%;
   margin: 200px 150px 70px 300px;
   border: #074506 3px solid;
-  border-radius: 20px;
+  border-radius: 7px;
   padding: 20px;
-  background-color: #3e9c3c43;
+  background-color: #075a0643;
+  box-shadow: 10px 10px 8px #116e273d;
 }
 .left-column {
   margin-right: 50px;
   border: #086506 3px solid;
-  border-radius: 20px;
+  border-radius: 7px;
   padding: 20px;
   background-color: #fdffed;
   text-align: center;
 }
 .right-column {
   border: #086506 3px solid;
-  border-radius: 20px;
+  border-radius: 7px;
   padding: 20px;
   background-color: #fdffed;
 }
@@ -137,7 +138,7 @@
     border: #074506 3px solid;
     border-radius: 20px;
     padding: 20px;
-    background-color: #94c893;
+    background-color: #075a0643;
   }
   .left-column {
     margin: 0 0 10px 0;

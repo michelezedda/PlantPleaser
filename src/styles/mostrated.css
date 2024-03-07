@@ -1,39 +1,41 @@
-.popular-container {
-  margin-top: 70px;
-  padding: 30px 70px 70px 300px;
-  background-color: #14702243;
+.most-rated-container {
+  margin-top: 50px;
+  padding: 20px 70px 70px 300px;
+  background-color: #96635d43;
 }
-.popular-container h2 {
+.most-rated-container h2 {
   margin-bottom: 60px;
   text-align: center;
   font-size: 40px;
-  color: #214724;
+  color: #472121;
 }
-.card-container {
+.rated-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-auto-rows: max-content;
   row-gap: 30px;
   column-gap: 20px;
 }
-.card {
+.rated {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   border-radius: 5px;
-  box-shadow: 4px 4px 4px #116e273d;
+  color: #442929;
+  box-shadow: 4px 4px 4px #96635d43;
   width: 100%;
   background-color: #ffffff;
   transition: background 0.5s, transform 0.5s;
   height: 220px;
   overflow: hidden;
 }
-.card:hover {
-  background-color: #efffd0b4;
+.rated:hover {
+  background-color: #ffd0dbb4;
   transform: translateY(-10px);
+  color: #5c0c08;
 }
-.card h4 {
+.rated h4 {
   padding: 5px 10px;
   margin: 0;
   overflow: hidden;
@@ -41,7 +43,7 @@
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
 }
-.card img {
+.rated img {
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   width: 100%;
@@ -49,42 +51,43 @@
 }
 /* MEDIA QUERIES */
 @media (max-width: 750px) {
-  .popular-container {
-    margin-top: 0px;
+  .most-rated-container {
     padding: 10px 10px 10px 10px;
-    background-color: #14702243;
+    background-color: #96635d43;
   }
-  .popular-container h2 {
+  .most-rated-container h2 {
     margin-bottom: 30px;
     text-align: center;
     font-size: 35px;
-    color: #214724;
+    color: #472121;
   }
-  .card-container {
+  .rated-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-auto-rows: max-content;
     row-gap: 30px;
     column-gap: 20px;
   }
-  .card {
+  .rated {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     border-radius: 5px;
-    box-shadow: 4px 4px 4px #116e273d;
+    color: #472121;
+    box-shadow: 4px 4px 4px #96635d43;
     width: 100%;
     background-color: #ffffff;
     transition: background 0.5s, transform 0.5s;
     height: 220px;
     overflow: hidden;
   }
-  .card:hover {
-    background-color: #efffd0b4;
+  .rated:hover {
+    background-color: #ffd0dbb4;
     transform: none;
+    color: #5c0c08;
   }
-  .card h4 {
+  .rated h4 {
     padding: 2px 2px;
     margin: 0;
     overflow: hidden;
@@ -92,7 +95,7 @@
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
   }
-  .card img {
+  .rated img {
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     width: 100%;
@@ -101,42 +104,43 @@
   }
 }
 @media (min-width: 750.02px) and (max-width: 1400px) {
-  .popular-container {
-    margin: 0;
+  .most-rated-container {
     padding: 10px 10px 10px 10px;
-    background-color: #14702243;
+    background-color: #96635d43;
   }
-  .popular-container h2 {
+  .most-rated-container h2 {
     margin-bottom: 30px;
     text-align: center;
     font-size: 35px;
-    color: #214724;
+    color: #472121;
   }
-  .card-container {
+  .rated-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-auto-rows: max-content;
     row-gap: 30px;
     column-gap: 20px;
   }
-  .card {
+  .rated {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     border-radius: 5px;
-    box-shadow: 4px 4px 4px #116e273d;
+    color: #442929;
+    box-shadow: 4px 4px 4px #96635d43;
     width: 100%;
     background-color: #ffffff;
     transition: background 0.5s, transform 0.5s;
     height: 220px;
     overflow: hidden;
   }
-  .card:hover {
-    background-color: #efffd0b4;
+  .rated:hover {
+    background-color: #ffd0dbb4;
     transform: none;
+    color: #5c0c08;
   }
-  .card h4 {
+  .rated h4 {
     padding: 2px 2px;
     margin: 0;
     overflow: hidden;
@@ -146,41 +150,43 @@
   }
 }
 @media (min-width: 1400.02px) and (max-width: 2100px) {
-  .popular-container {
+  .most-rated-container {
     padding: 70px 100px 40px 200px;
-    background-color: #14702243;
+    background-color: #96635d43;
   }
-  .popular-container h2 {
+  .most-rated-container h2 {
     margin-bottom: 30px;
     text-align: center;
     font-size: 40px;
-    color: #214724;
+    color: #472121;
   }
-  .card-container {
+  .rated-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-auto-rows: max-content;
     row-gap: 30px;
     column-gap: 20px;
   }
-  .card {
+  .rated {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    color: #442929;
     border-radius: 5px;
-    box-shadow: 4px 4px 4px #116e273d;
+    box-shadow: 4px 4px 4px #96635d43;
     width: 100%;
     background-color: #ffffff;
     transition: background 0.5s, transform 0.5s;
     height: 220px;
     overflow: hidden;
   }
-  .card:hover {
-    background-color: #efffd0b4;
+  .rated:hover {
+    background-color: #ffd0dbb4;
     transform: translateY(-10px);
+    color: #5c0c08;
   }
-  .card h4 {
+  .rated h4 {
     padding: 5px 10px;
     margin: 0;
     overflow: hidden;

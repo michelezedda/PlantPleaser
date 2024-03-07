@@ -1,12 +1,12 @@
 import React from "react";
-import ReactDOM from "react-dom/client";
+import ReactDOM from "react-dom";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import "../src/styles/index.css";
+import "./styles/index.css";
 
 import App from "./App.jsx";
-import Recipe from "../src/pages/Recipe.jsx";
-import NotFoundPage from "../src/pages/NotFoundPage.jsx";
-import Category from "../src/pages/Category.jsx";
+import Recipe from "./pages/Recipe.jsx";
+import NotFoundPage from "./pages/NotFoundPage.jsx";
+import Category from "./pages/Category.jsx";
 
 const router = createBrowserRouter([
   {
@@ -15,11 +15,11 @@ const router = createBrowserRouter([
     errorElement: <NotFoundPage />,
   },
   {
-    path: "../src/pages/recipe/:id",
+    path: "/recipe/:id",
     element: <Recipe />,
   },
   {
-    path: "../src/pages/category/:category",
+    path: "/category/:category",
     element: <Category />,
   },
 ]);
