@@ -936,9 +936,8 @@ input:focus {
     color: var(--toggle-fg);
     border-radius: 30px;
     font-size: 20px;
-    margin-left: -55px;
+    margin-left: -54px;
     margin-top: 2px;
-    padding: 2px 20px;
     cursor: pointer;
   }
   .search-btn:hover {
@@ -1044,7 +1043,7 @@ input:focus {
   }
   .card:hover {
     background-color: #efffd0b4;
-    transform: none;
+    transform: translateY(-10px);
   }
   .card h4 {
     padding: 5px 10px;
@@ -1088,7 +1087,7 @@ input:focus {
   }
   .result:hover {
     background-color: #7e7e7e3a;
-    transform: none;
+    transform: translateY(-10px);
     color: #000000;
   }
   .result h4 {
