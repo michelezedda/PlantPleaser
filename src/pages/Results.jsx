@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { LuVegan } from "react-icons/lu";
 import axios from "axios";
+import "../styles/results.css";
 
 function Results({ searchResults, searchRecipe, setSearchResults }) {
   const loadMoreRecipes = async () => {

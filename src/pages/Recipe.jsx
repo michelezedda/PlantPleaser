@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
-import JustLogo from "./JustLogo";
-import Sidebar from "./Sidebar";
+import JustLogo from "../components/JustLogo";
+import Sidebar from "../components/Sidebar";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import { LuVegan } from "react-icons/lu";
 import leafBg from "/leafbg.png";
+import "../styles/recipe.css";
 
 function Recipe() {
   const [details, setDetails] = useState({});
@@ -30,12 +31,6 @@ function Recipe() {
 
     fetchDetails();
   }, [params.id]);
-
-  const stripHtml = (html) => {
-    let temporalDivElement = document.createElement("div");
-    temporalDivElement.innerHTML = html;
-    return temporalDivElement.textContent || temporalDivElement.innerText || "";
-  };
 
   return (
     <>
@@ -71,18 +66,28 @@ function Recipe() {
             </p>
             <p>
               <b>Ingredients:</b>{" "}
-              {details.extendedIngredients
-                ? details.extendedIngredients
-                    .map((ingredient) => ingredient.name)
-                    .join(", ")
-                : "No ingredients information available"}
+              <ul>
+                {details.extendedIngredients ? (
+                  details.extendedIngredients.map((ingredient, index) => (
+                    <li key={index}>{ingredient.original}</li>
+                  ))
+                ) : (
+                  <li>No ingredients information available</li>
+                )}
+              </ul>
             </p>
-            <p>
-              <b>Instructions:</b>{" "}
-              {details.instructions
-                ? stripHtml(details.instructions)
-                : "No instructions available"}
-            </p>
+            {details.analyzedInstructions && (
+              <div>
+                <p>
+                  <b>Instructions:</b>
+                  <ol>
+                    {details.analyzedInstructions[0].steps.map((step) => (
+                      <li key={step.number}>{step.step}</li>
+                    ))}
+                  </ol>
+                </p>
+              </div>
+            )}
           </div>
         </div>
       )}

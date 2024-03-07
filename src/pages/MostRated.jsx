@@ -2,16 +2,17 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import { LuVegan } from "react-icons/lu";
+import "../styles/mostrated.css";
 
-function Popular() {
-  const [randomRecipes, setRandomRecipes] = useState([]);
-  const [selectedRandomRecipe, setSelectedRandomRecipe] = useState(null);
+function MostRated() {
+  const [mostRatedRecipes, setMostRatedRecipes] = useState([]);
+  const [selectedMostRatedRecipe, setSelectedMostRatedRecipe] = useState(null);
 
-  const handleViewRandomRecipe = (recipe) => {
-    setSelectedRandomRecipe(recipe);
+  const handleViewMostRatedRecipe = (recipe) => {
+    setSelectedMostRatedRecipe(recipe);
   };
 
-  const fetchRandomRecipes = async () => {
+  const fetchMostRatedRecipes = async () => {
     const myKey = import.meta.env.VITE_SOME_KEY;
     try {
       const response = await axios.get(
@@ -24,17 +25,17 @@ function Popular() {
           },
         }
       );
-      setRandomRecipes(response.data?.recipes || []);
+      setMostRatedRecipes(response.data?.recipes || []);
     } catch (error) {
       console.error("Error fetching data:", error);
     }
   };
 
   useEffect(() => {
-    fetchRandomRecipes();
+    fetchMostRatedRecipes();
   }, []);
 
-  const loadMoreRandomRecipes = async () => {
+  const loadMoreMostRatedRecipes = async () => {
     const myKey = import.meta.env.VITE_SOME_KEY;
     try {
       const response = await axios.get(
@@ -47,7 +48,10 @@ function Popular() {
           },
         }
       );
-      setRandomRecipes([...randomRecipes, ...(response.data?.recipes || [])]);
+      setMostRatedRecipes([
+        ...mostRatedRecipes,
+        ...(response.data?.recipes || []),
+      ]);
     } catch (error) {
       console.error("Error fetching more data:", error);
     }
@@ -55,31 +59,35 @@ function Popular() {
 
   return (
     <>
-      <div className="popular-container">
-        <h2>MOST POPULAR</h2>
-        <div className="card-container">
-          {randomRecipes.map((randomRecipe) => (
+      <div className="most-rated-container">
+        <h2>MOST RATED</h2>
+        <div className="rated-container">
+          {mostRatedRecipes.map((mostRatedRecipe) => (
             <Link
-              to={`/recipe/${randomRecipe.id}`}
-              onClick={() => handleViewRandomRecipe(randomRecipe)}
-              key={randomRecipe.id}
+              to={`/recipe/${mostRatedRecipe.id}`}
+              onClick={() => handleViewMostRatedRecipe(mostRatedRecipe)}
+              key={mostRatedRecipe.id}
             >
-              <div className="card">
+              <div className="rated">
                 <img
-                  src={randomRecipe.image}
-                  alt={randomRecipe.title}
+                  src={mostRatedRecipe.image}
+                  alt={mostRatedRecipe.title}
                   onError={(event) => {
                     event.target.src = "default-pic.png";
                   }}
                 />
                 <h4>
                   <LuVegan />
-                  &nbsp;{randomRecipe.title}
+                  &nbsp;{mostRatedRecipe.title}
                 </h4>
               </div>
             </Link>
           ))}
-          <div className="card" id="load-more" onClick={loadMoreRandomRecipes}>
+          <div
+            className="card"
+            id="load-more"
+            onClick={loadMoreMostRatedRecipes}
+          >
             <h4>Load More Recipes</h4>
           </div>
         </div>
@@ -88,4 +96,4 @@ function Popular() {
   );
 }
 
-export default Popular;
+export default MostRated;

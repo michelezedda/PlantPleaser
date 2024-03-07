@@ -1,6 +1,7 @@
-import JustLogo from "./JustLogo";
-import Sidebar from "./Sidebar";
+import JustLogo from "../components/JustLogo";
+import Sidebar from "../components/Sidebar";
 import leafBg from "/leafbg.png";
+import "../styles/notfoundpage.css";
 
 function NotFoundPage() {
   return (

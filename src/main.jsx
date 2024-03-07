@@ -1,12 +1,12 @@
 import React from "react";
-import ReactDOM from "react-dom/client";
+import ReactDOM from "react-dom";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import "./index.css";
+import "./styles/index.css";
 
 import App from "./App.jsx";
-import Recipe from "./Recipe.jsx";
-import NotFoundPage from "./NotFoundPage.jsx";
-import Category from "./Category.jsx";
+import Recipe from "./pages/Recipe.jsx";
+import NotFoundPage from "./pages/NotFoundPage.jsx";
+import Category from "./pages/Category.jsx";
 
 const router = createBrowserRouter([
   {
