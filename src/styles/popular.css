@@ -28,6 +28,7 @@
   transition: background 0.5s, transform 0.5s;
   height: 220px;
   overflow: hidden;
+  padding-bottom: 12px;
 }
 .card:hover {
   background-color: #efffd0b4;
@@ -79,13 +80,14 @@
     transition: background 0.5s, transform 0.5s;
     height: 220px;
     overflow: hidden;
+    padding-bottom: 12px;
   }
   .card:hover {
     background-color: #efffd0b4;
     transform: none;
   }
   .card h4 {
-    padding: 2px 2px;
+    padding: 5px 10px;
     margin: 0;
     overflow: hidden;
     display: -webkit-box;
@@ -131,13 +133,14 @@
     transition: background 0.5s, transform 0.5s;
     height: 220px;
     overflow: hidden;
+    padding-bottom: 12px;
   }
   .card:hover {
     background-color: #efffd0b4;
     transform: none;
   }
   .card h4 {
-    padding: 2px 2px;
+    padding: 5px 10px;
     margin: 0;
     overflow: hidden;
     display: -webkit-box;
@@ -175,6 +178,7 @@
     transition: background 0.5s, transform 0.5s;
     height: 220px;
     overflow: hidden;
+    padding-bottom: 12px;
   }
   .card:hover {
     background-color: #efffd0b4;
