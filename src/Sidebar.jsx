@@ -6,14 +6,18 @@ import { Link } from "react-router-dom";
 function Sidebar() {
   const [isOpen, setIsOpen] = useState(false);
 
-  const toggleSidebar = () => {
+  const openSidebar = () => {
     setIsOpen(!isOpen);
+  };
+
+  const closeSidebar = () => {
+    setIsOpen(false);
   };
 
   return (
     <>
       <div className={`sidebar-container ${isOpen ? "open" : ""}`}>
-        <button className="sidebar-toggle-btn" onClick={toggleSidebar}>
+        <button className="sidebar-toggle-btn" onClick={openSidebar}>
           {isOpen ? (
             <TbLayoutSidebarRightExpandFilled />
           ) : (
@@ -23,32 +27,32 @@ function Sidebar() {
         <div className="select-menu">
           <ul>
             <Link to="/">
-              <li>HOME</li>
+              <li onClick={closeSidebar}>HOME</li>
             </Link>
             <br />
             <Link to="/category/appetizer">
-              <li>appetizer</li>
+              <li onClick={closeSidebar}>appetizer</li>
             </Link>
             <Link to="/category/main%20course">
-              <li>main course</li>
+              <li onClick={closeSidebar}>main course</li>
             </Link>
             <Link to="/category/side%20dish">
-              <li>side dish</li>
+              <li onClick={closeSidebar}>side dish</li>
             </Link>
             <Link to="/category/fingerfood">
-              <li>fingerfood</li>
+              <li onClick={closeSidebar}>fingerfood</li>
             </Link>
             <Link to="/category/snack">
-              <li>snack</li>
+              <li onClick={closeSidebar}>snack</li>
             </Link>
             <Link to="/category/salad">
-              <li>salad</li>
+              <li onClick={closeSidebar}>salad</li>
             </Link>
             <Link to="/category/dessert">
-              <li>dessert</li>
+              <li onClick={closeSidebar}>dessert</li>
             </Link>
             <Link to="/category/beverage">
-              <li>beverage</li>
+              <li onClick={closeSidebar}>beverage</li>
             </Link>
           </ul>
         </div>
