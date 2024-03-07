@@ -91,6 +91,7 @@
     color: #093508;
   }
   .sidebar-container.open {
+    position: fixed;
     background-color: #ffffff;
     left: -1px;
     box-shadow: #093508d1 4px 4px 4px 5000px;
@@ -161,6 +162,7 @@
     color: #093508;
   }
   .sidebar-container.open {
+    position: fixed;
     background-color: #ffffff;
     left: -1px;
     box-shadow: #093508d1 4px 4px 4px 5000px;

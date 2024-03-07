@@ -49,8 +49,8 @@
     width: 100%;
     padding: 10px 100px;
     z-index: 100;
-    border-bottom: #00000025 0 solid;
-    border-left: #00000025 0 solid;
+    border-bottom: #00000025 2px solid;
+    border-left: #00000025 2px solid;
   }
   .navbar-container img {
     height: 50px;
@@ -87,8 +87,8 @@
     width: 100%;
     padding: 10px 100px;
     z-index: 100;
-    border-bottom: #00000025 0 solid;
-    border-left: #00000025 0 solid;
+    border-bottom: #00000025 2px solid;
+    border-left: #00000025 2px solid;
   }
   .navbar-container img {
     height: 60px;

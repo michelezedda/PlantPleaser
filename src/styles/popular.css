@@ -28,13 +28,14 @@
   transition: background 0.5s, transform 0.5s;
   height: 220px;
   overflow: hidden;
+  padding-bottom: 12px;
 }
 .card:hover {
   background-color: #efffd0b4;
   transform: translateY(-10px);
 }
 .card h4 {
-  padding: 5px 10px;
+  padding: 0 10px;
   margin: 0;
   overflow: hidden;
   display: -webkit-box;
@@ -79,13 +80,14 @@
     transition: background 0.5s, transform 0.5s;
     height: 220px;
     overflow: hidden;
+    padding-bottom: 12px;
   }
   .card:hover {
     background-color: #efffd0b4;
     transform: none;
   }
   .card h4 {
-    padding: 5px 10px;
+    padding: 0 10px;
     margin: 0;
     overflow: hidden;
     display: -webkit-box;
@@ -131,14 +133,14 @@
     transition: background 0.5s, transform 0.5s;
     height: 220px;
     overflow: hidden;
-    padding-bottom: 5px 5px;
+    padding-bottom: 12px;
   }
   .card:hover {
     background-color: #efffd0b4;
     transform: none;
   }
   .card h4 {
-    padding: 5px 10px;
+    padding: 0 10px;
     margin: 0;
     overflow: hidden;
     display: -webkit-box;
@@ -176,14 +178,14 @@
     transition: background 0.5s, transform 0.5s;
     height: 220px;
     overflow: hidden;
-    padding: 5px 5px;
+    padding-bottom: 12px;
   }
   .card:hover {
     background-color: #efffd0b4;
     transform: translateY(-10px);
   }
   .card h4 {
-    padding: 5px 10px;
+    padding: 0 10px;
     margin: 0;
     overflow: hidden;
     display: -webkit-box;
