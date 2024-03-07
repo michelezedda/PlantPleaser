@@ -67,7 +67,7 @@
 /* MEDIA QUERIES */
 @media (max-width: 750px) {
   .sidebar-container {
-    height: 500%;
+    height: 200%;
     width: 300px;
     min-width: 200px;
     border-right: #00000025 0 solid;
@@ -84,7 +84,7 @@
     background-color: transparent;
     position: absolute;
     top: 12px;
-    right: 20px;
+    right: 5px;
     font-size: 35px;
     cursor: pointer;
     border: none;
@@ -137,7 +137,7 @@
 }
 @media (min-width: 750.02px) and (max-width: 1400px) {
   .sidebar-container {
-    height: 500%;
+    height: 200%;
     width: 300px;
     min-width: 200px;
     border-right: #00000025 0 solid;
