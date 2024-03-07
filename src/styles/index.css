@@ -64,7 +64,7 @@ input:focus {
   justify-content: center;
   align-items: center;
   border-radius: 5px;
-  box-shadow: 4px 4px 4px #116e273d;
+  box-shadow: 4px 4px 4px #7e7e7eac;
   width: 100%;
   transition: background 0.5s, transform 0.5s;
   height: 220px;
@@ -77,7 +77,7 @@ input:focus {
   font-size: 20px;
   left: 50%;
   bottom: 50%;
-  color: #214724;
+  color: #414141;
   z-index: 2;
 }
 #load-more::before {
