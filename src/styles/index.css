@@ -11,10 +11,13 @@
   --toggle-bg: #208429;
   --toggle-fg: #214724;
 }
+html,
 body {
   margin: 0;
   padding: 0;
   height: auto;
+  max-width: 100%;
+  max-height: 100%;
   overflow: hidden;
 }
 a {
