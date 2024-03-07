@@ -1,0 +1,188 @@
+.popular-container {
+  padding: 20px 70px 70px 300px;
+  background-color: #14702243;
+}
+.popular-container h2 {
+  margin-bottom: 60px;
+  text-align: center;
+  font-size: 40px;
+  color: #214724;
+}
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-auto-rows: max-content;
+  row-gap: 30px;
+  column-gap: 20px;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 5px;
+  box-shadow: 4px 4px 4px #116e273d;
+  width: 100%;
+  background-color: #ffffff;
+  transition: background 0.5s, transform 0.5s;
+  height: 220px;
+  overflow: hidden;
+}
+.card:hover {
+  background-color: #efffd0b4;
+  transform: translateY(-10px);
+}
+.card h4 {
+  padding: 5px 10px;
+  margin: 0;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.card img {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  width: 100%;
+  height: auto;
+}
+/* MEDIA QUERIES */
+@media (max-width: 750px) {
+  .popular-container {
+    padding: 10px 10px 10px 10px;
+    background-color: #14702243;
+  }
+  .popular-container h2 {
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 35px;
+    color: #214724;
+  }
+  .card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-auto-rows: max-content;
+    row-gap: 30px;
+    column-gap: 20px;
+  }
+  .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 4px 4px 4px #116e273d;
+    width: 100%;
+    background-color: #ffffff;
+    transition: background 0.5s, transform 0.5s;
+    height: 220px;
+    overflow: hidden;
+  }
+  .card:hover {
+    background-color: #efffd0b4;
+    transform: none;
+  }
+  .card h4 {
+    padding: 2px 2px;
+    margin: 0;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+  .card img {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+  }
+}
+@media (min-width: 750.02px) and (max-width: 1400px) {
+  .popular-container {
+    padding: 10px 10px 10px 10px;
+    background-color: #14702243;
+  }
+  .popular-container h2 {
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 35px;
+    color: #214724;
+  }
+  .card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-auto-rows: max-content;
+    row-gap: 30px;
+    column-gap: 20px;
+  }
+  .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 4px 4px 4px #116e273d;
+    width: 100%;
+    background-color: #ffffff;
+    transition: background 0.5s, transform 0.5s;
+    height: 220px;
+    overflow: hidden;
+  }
+  .card:hover {
+    background-color: #efffd0b4;
+    transform: none;
+  }
+  .card h4 {
+    padding: 2px 2px;
+    margin: 0;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+}
+@media (min-width: 1400.02px) and (max-width: 2100px) {
+  .popular-container {
+    padding: 70px 100px 40px 200px;
+    background-color: #14702243;
+  }
+  .popular-container h2 {
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 40px;
+    color: #214724;
+  }
+  .card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-auto-rows: max-content;
+    row-gap: 30px;
+    column-gap: 20px;
+  }
+  .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 4px 4px 4px #116e273d;
+    width: 100%;
+    background-color: #ffffff;
+    transition: background 0.5s, transform 0.5s;
+    height: 220px;
+    overflow: hidden;
+  }
+  .card:hover {
+    background-color: #efffd0b4;
+    transform: translateY(-10px);
+  }
+  .card h4 {
+    padding: 5px 10px;
+    margin: 0;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+}

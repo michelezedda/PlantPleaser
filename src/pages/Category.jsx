@@ -3,8 +3,9 @@ import axios from "axios";
 import { Link, useParams } from "react-router-dom";
 import { LuVegan } from "react-icons/lu";
 import leafBg from "/leafbg.png";
-import JustLogo from "./JustLogo";
-import Sidebar from "./Sidebar";
+import JustLogo from "../components/JustLogo";
+import Sidebar from "../components/Sidebar";
+import "../styles/category.css";
 
 function Category() {
   const [categoryRecipes, setCategoryRecipes] = useState([]);

@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
-import JustLogo from "./JustLogo";
-import Sidebar from "./Sidebar";
+import JustLogo from "../components/JustLogo";
+import Sidebar from "../components/Sidebar";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import { LuVegan } from "react-icons/lu";
 import leafBg from "/leafbg.png";
+import "../styles/recipe.css";
 
 function Recipe() {
   const [details, setDetails] = useState({});

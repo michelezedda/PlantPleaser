@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { TbLayoutSidebarRightCollapseFilled } from "react-icons/tb";
 import { TbLayoutSidebarRightExpandFilled } from "react-icons/tb";
 import { Link } from "react-router-dom";
+import "../styles/sidebar.css";
 
 function Sidebar() {
   const [isOpen, setIsOpen] = useState(false);

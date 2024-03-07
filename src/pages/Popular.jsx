@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import { LuVegan } from "react-icons/lu";
+import "../styles/popular.css";
 
 function Popular() {
   const [randomRecipes, setRandomRecipes] = useState([]);
