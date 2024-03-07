@@ -64,7 +64,7 @@ function Category() {
         <h2>{category.toUpperCase()}</h2>
         <div className="categories-result">
           {categoryRecipes.map((categoryRecipe) => (
-            <Link to={`recipe/${categoryRecipe.id}`} key={categoryRecipe.id}>
+            <Link to={`/recipe/${categoryRecipe.id}`} key={categoryRecipe.id}>
               <div className="category-result">
                 <img
                   src={categoryRecipe.image}
