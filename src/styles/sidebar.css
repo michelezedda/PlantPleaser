@@ -83,8 +83,8 @@
   .sidebar-toggle-btn {
     background-color: transparent;
     position: absolute;
-    top: 12px;
-    right: 5px;
+    top: 20;
+    right: 1%;
     font-size: 35px;
     cursor: pointer;
     border: none;
@@ -154,8 +154,8 @@
   .sidebar-toggle-btn {
     background-color: transparent;
     position: absolute;
-    top: 15px;
-    right: 1px;
+    top: 25;
+    right: 1;
     font-size: 35px;
     cursor: pointer;
     border: none;
@@ -225,8 +225,8 @@
   .sidebar-toggle-btn {
     background-color: #ffffff;
     position: absolute;
-    top: 20px;
-    right: 20px;
+    top: 20;
+    right: 20;
     font-size: 35px;
     cursor: pointer;
     border: none;
