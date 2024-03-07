@@ -47,7 +47,7 @@
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
-    padding: 10px 100px;
+    padding: 10px 0;
     z-index: 100;
     border-bottom: #00000025 2px solid;
     border-left: #00000025 2px solid;
@@ -85,7 +85,7 @@
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
-    padding: 10px 100px;
+    padding: 10px 0;
     z-index: 100;
     border-bottom: #00000025 2px solid;
     border-left: #00000025 2px solid;

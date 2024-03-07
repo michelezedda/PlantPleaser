@@ -8,7 +8,6 @@
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
-  padding: 0 100px;
   z-index: 100;
   border-bottom: #00000025 1px solid;
   border-left: #00000025 1px solid;
@@ -61,7 +60,6 @@
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
-    padding: 0 100px;
     z-index: 100;
     border-bottom: #00000025 1px solid;
     border-left: #00000025 1px solid;
