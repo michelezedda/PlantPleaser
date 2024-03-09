@@ -66,26 +66,26 @@ function Recipe() {
             </p>
             <p>
               <b>Ingredients:</b>{" "}
-              <ul>
-                {details.extendedIngredients ? (
-                  details.extendedIngredients.map((ingredient, index) => (
-                    <li key={index}>{ingredient.original}</li>
-                  ))
-                ) : (
-                  <li>No ingredients information available</li>
-                )}
-              </ul>
             </p>
+            <ul>
+              {details.extendedIngredients ? (
+                details.extendedIngredients.map((ingredient, index) => (
+                  <li key={index}>{ingredient.original}</li>
+                ))
+              ) : (
+                <li>No ingredients information available</li>
+              )}
+            </ul>
             {details.analyzedInstructions && (
               <div>
                 <p>
-                  <b>Instructions:</b>
-                  <ol>
-                    {details.analyzedInstructions[0].steps.map((step) => (
-                      <li key={step.number}>{step.step}</li>
-                    ))}
-                  </ol>
+                  <b>Instructions:</b>{" "}
                 </p>
+                <ol>
+                  {details.analyzedInstructions[0].steps.map((step) => (
+                    <li key={step.number}>{step.step}</li>
+                  ))}
+                </ol>
               </div>
             )}
           </div>

@@ -37,6 +37,16 @@
   font-size: 20px;
   margin-bottom: 10px;
 }
+.full-recipe ul {
+  text-align: left;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+.full-recipe ol {
+  text-align: left;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
 /* MEDIA QUERIES */
 @media (max-width: 750px) {
   .full-recipe {
