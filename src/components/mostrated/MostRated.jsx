@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import { LuVegan } from "react-icons/lu";
-import "../styles/mostrated.css";
+import "./mostrated.css";
 
 function MostRated() {
   const [mostRatedRecipes, setMostRatedRecipes] = useState([]);
@@ -13,7 +13,7 @@ function MostRated() {
   };
 
   const fetchMostRatedRecipes = async () => {
-    const myKey = import.meta.env.VITE_SOME_KEY;
+    const myKey = import.meta.env.VITE_SPOONACULAR_KEY;
     try {
       const response = await axios.get(
         `https://api.spoonacular.com/recipes/random`,
@@ -36,7 +36,7 @@ function MostRated() {
   }, []);
 
   const loadMoreMostRatedRecipes = async () => {
-    const myKey = import.meta.env.VITE_SOME_KEY;
+    const myKey = import.meta.env.VITE_SPOONACULAR_KEY;
     try {
       const response = await axios.get(
         `https://api.spoonacular.com/recipes/random`,

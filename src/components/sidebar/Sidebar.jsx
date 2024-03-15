@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { TbLayoutSidebarRightCollapseFilled } from "react-icons/tb";
 import { TbLayoutSidebarRightExpandFilled } from "react-icons/tb";
 import { Link } from "react-router-dom";
-import "../styles/sidebar.css";
+import "./sidebar.css";
 
 function Sidebar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -34,10 +34,10 @@ function Sidebar() {
             <Link to="/category/appetizer">
               <li onClick={closeSidebar}>appetizer</li>
             </Link>
-            <Link to="/category/main%20course">
+            <Link to="/category/main-course">
               <li onClick={closeSidebar}>main course</li>
             </Link>
-            <Link to="/category/side%20dish">
+            <Link to="/category/side-dish">
               <li onClick={closeSidebar}>side dish</li>
             </Link>
             <Link to="/category/fingerfood">

@@ -1,7 +1,7 @@
 import React from "react";
 import myLogo from "/logo.png";
 import { Link } from "react-router-dom";
-import "../styles/justlogo.css";
+import "./justlogo.css";
 
 function JustLogo() {
   return (

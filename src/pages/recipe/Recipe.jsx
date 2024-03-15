@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
-import JustLogo from "../components/JustLogo";
-import Sidebar from "../components/Sidebar";
+import JustLogo from "../../components/justlogo/JustLogo";
+import Sidebar from "../../components/sidebar/Sidebar";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import { LuVegan } from "react-icons/lu";
 import leafBg from "/leafbg.png";
-import "../styles/recipe.css";
+import "./recipe.css";
+import { Helmet } from "react-helmet";
 
 function Recipe() {
   const [details, setDetails] = useState({});
@@ -14,7 +15,7 @@ function Recipe() {
   useEffect(() => {
     const fetchDetails = async () => {
       try {
-        const myKey = import.meta.env.VITE_SOME_KEY;
+        const myKey = import.meta.env.VITE_SPOONACULAR_KEY;
         const response = await axios.get(
           `https://api.spoonacular.com/recipes/${params.id}/information`,
           {
@@ -32,8 +33,15 @@ function Recipe() {
     fetchDetails();
   }, [params.id]);
 
+  const recipeTitle = details.title || "Recipe";
+
   return (
     <>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>{recipeTitle} plantpleaser</title>
+        <link rel="canonical" href="https://plantpleaser.netlify.app/" />
+      </Helmet>
       <JustLogo />
       <Sidebar />
       {details && (

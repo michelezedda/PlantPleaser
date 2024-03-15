@@ -1,19 +1,20 @@
 import { useState } from "react";
 import React from "react";
-import Sidebar from "../src/components/Sidebar";
-import Navbar from "../src/components/Navbar";
-import Results from "../src/pages/Results";
-import Popular from "../src/pages/Popular";
-import MostRated from "../src/pages/MostRated";
+import Sidebar from "./components/sidebar/Sidebar";
+import Navbar from "./components/navbar/Navbar";
+import Results from "./components/results/Results";
+import Popular from "./components/popular/Popular";
+import MostRated from "./components/mostrated/MostRated";
 import axios from "axios";
 import leafBg from "/leafbg.png";
+import { Helmet } from "react-helmet";
 
 function App() {
   const [searchRecipe, setSearchRecipe] = useState("");
   const [searchResults, setSearchResults] = useState([]);
 
   const handleSearch = async () => {
-    const myKey = import.meta.env.VITE_SOME_KEY;
+    const myKey = import.meta.env.VITE_SPOONACULAR_KEY;
     try {
       const response = await axios.get(
         "https://api.spoonacular.com/recipes/complexSearch",
@@ -22,7 +23,7 @@ function App() {
             apiKey: myKey,
             query: searchRecipe,
             tags: "vegan, vegetarian",
-            number: "21",
+            number: "8",
           },
         }
       );
@@ -34,6 +35,11 @@ function App() {
 
   return (
     <>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>plantpleaser</title>
+        <link rel="canonical" href="https://plantpleaser.netlify.app/" />
+      </Helmet>
       <Navbar
         searchRecipe={searchRecipe}
         setSearchRecipe={setSearchRecipe}

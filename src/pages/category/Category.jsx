@@ -3,16 +3,17 @@ import axios from "axios";
 import { Link, useParams } from "react-router-dom";
 import { LuVegan } from "react-icons/lu";
 import leafBg from "/leafbg.png";
-import JustLogo from "../components/JustLogo";
-import Sidebar from "../components/Sidebar";
-import "../styles/category.css";
+import JustLogo from "../../components/justlogo/JustLogo";
+import Sidebar from "../../components/sidebar/Sidebar";
+import "./category.css";
+import { Helmet } from "react-helmet";
 
 function Category() {
   const [categoryRecipes, setCategoryRecipes] = useState([]);
   const { category } = useParams();
 
   const fetchCategoryRecipes = async () => {
-    const myKey = import.meta.env.VITE_SOME_KEY;
+    const myKey = import.meta.env.VITE_SPOONACULAR_KEY;
     try {
       const response = await axios.get(
         `https://api.spoonacular.com/recipes/random`,
@@ -35,7 +36,7 @@ function Category() {
   }, [category]);
 
   const loadMoreCategoryRecipes = async () => {
-    const myKey = import.meta.env.VITE_SOME_KEY;
+    const myKey = import.meta.env.VITE_SPOONACULAR_KEY;
     try {
       const response = await axios.get(
         `https://api.spoonacular.com/recipes/random`,
@@ -58,6 +59,11 @@ function Category() {
 
   return (
     <>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>plantpleaser: {category} recipes</title>
+        <link rel="canonical" href="https://plantpleaser.netlify.app/" />
+      </Helmet>
       <Sidebar />
       <JustLogo />
       <div className="categories-container">

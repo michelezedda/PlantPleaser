@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
 import { LuVegan } from "react-icons/lu";
 import axios from "axios";
-import "../styles/results.css";
+import "./results.css";
 
 function Results({ searchResults, searchRecipe, setSearchResults }) {
   const loadMoreRecipes = async () => {
-    const myKey = import.meta.env.VITE_SOME_KEY;
+    const myKey = import.meta.env.VITE_SPOONACULAR_KEY;
     try {
       const response = await axios.get(
         "https://api.spoonacular.com/recipes/complexSearch",
