@@ -1,0 +1,39 @@
+@import "../../styles/config";
+
+.navbar-container {
+  background-color: $primary-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  z-index: 100;
+  border-bottom: $brown-color 1px solid;
+  box-shadow: 1px 1px 2px lighten($brown-color, 0.9%);
+  .logo-container img {
+    width: 180px;
+    height: auto;
+    margin-right: 20px;
+  }
+  .search-btn {
+    border: 1px none var(--secondary-text-color);
+    background-color: $primary-color;
+    color: $brown-color;
+    border-radius: 30px;
+    font-size: 18px;
+    margin-left: -55px;
+    margin-top: 2px;
+    padding: 8px 22px;
+    cursor: pointer;
+  }
+  .search-btn:hover {
+    border-color: none;
+    background-color: transparent;
+  }
+  .search-btn:active {
+    transform: scale(0.95);
+  }
+}

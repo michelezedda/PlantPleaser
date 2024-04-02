@@ -2,8 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link, useParams } from "react-router-dom";
 import { LuVegan } from "react-icons/lu";
-import leafBg from "/leafbg.png";
-import JustLogo from "../../components/justlogo/JustLogo";
+import Navbar from "../../components/navbar/Navbar";
 import Sidebar from "../../components/sidebar/Sidebar";
 import "./category.css";
 import { Helmet } from "react-helmet";
@@ -61,11 +60,11 @@ function Category() {
     <>
       <Helmet>
         <meta charSet="utf-8" />
-        <title>plantpleaser: {category} recipes</title>
-        <link rel="canonical" href="https://plantpleaser.netlify.app/" />
+        <title>Avocado: {category} recipes</title>
+        <link rel="canonical" href="https://vegavocado.netlify.app/" />
       </Helmet>
+      <Navbar />
       <Sidebar />
-      <JustLogo />
       <div className="categories-container">
         <h2>{category.toUpperCase()}</h2>
         <div className="categories-result">
@@ -94,9 +93,6 @@ function Category() {
             <h4>Load More Recipes</h4>
           </div>
         </div>
-      </div>
-      <div className="leaf-bg">
-        <img src={leafBg} alt="leaf background" />
       </div>
     </>
   );

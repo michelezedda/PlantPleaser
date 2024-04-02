@@ -1,0 +1,53 @@
+@import "../../styles/config";
+
+.popular-container {
+  background-color: $bg-color-1;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+  padding: 150px 40px;
+  h2 {
+    margin-bottom: 60px;
+    text-align: center;
+    font-size: 40px;
+    color: $brown-color;
+  }
+  .card-container {
+    display: flex;
+    row-gap: 30px;
+    column-gap: 20px;
+  }
+  .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 4px 4px 4px $brown-color;
+    width: 100%;
+    background-color: #ffffff;
+    transition: background 0.5s, transform 0.5s;
+    height: 220px;
+    overflow: hidden;
+    padding-bottom: 12px;
+    .card h4 {
+      padding: 5px 10px;
+      margin: 0;
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+    }
+    img {
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+      width: 100%;
+      height: auto;
+    }
+    .card:hover {
+      background-color: $brown-color;
+      transform: translateY(-10px);
+    }
+  }
+}

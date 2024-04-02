@@ -20,7 +20,7 @@ function Navbar({ searchRecipe, setSearchRecipe, handleSearch }) {
       <div className="navbar-container">
         <div className="logo-container">
           <Link to="/">
-            <img src={myLogo} alt="plantpleaser logo" />
+            <img src={myLogo} alt="avocado logo" />
           </Link>
         </div>
         <div className="search-container">

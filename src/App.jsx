@@ -5,8 +5,8 @@ import Navbar from "./components/navbar/Navbar";
 import Results from "./components/results/Results";
 import Popular from "./components/popular/Popular";
 import MostRated from "./components/mostrated/MostRated";
+import Footer from "./components/footer/Footer";
 import axios from "axios";
-import leafBg from "/leafbg.png";
 import { Helmet } from "react-helmet";
 
 function App() {
@@ -37,8 +37,8 @@ function App() {
     <>
       <Helmet>
         <meta charSet="utf-8" />
-        <title>plantpleaser</title>
-        <link rel="canonical" href="https://plantpleaser.netlify.app/" />
+        <title>Avocado</title>
+        <link rel="canonical" href="https://vegavocado.netlify.app/" />
       </Helmet>
       <Navbar
         searchRecipe={searchRecipe}
@@ -53,9 +53,7 @@ function App() {
       />
       <Popular />
       <MostRated />
-      <div className="leaf-bg">
-        <img src={leafBg} />
-      </div>
+      <Footer />
     </>
   );
 }

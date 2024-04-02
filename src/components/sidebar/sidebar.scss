@@ -1,0 +1,45 @@
+@import "../../styles/config";
+
+.sidebar-container {
+  height: 100%;
+  width: 300px;
+  min-width: 200px;
+  z-index: 101;
+  padding: 30px 20px;
+  background-color: transparent;
+  position: fixed;
+  top: 0;
+  left: -250px;
+  transition: left 0.3s ease;
+  ul {
+    margin: 80px 0 0 30px;
+    list-style: none;
+    padding: 0;
+  }
+  li {
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: 400;
+    cursor: pointer;
+  }
+  li:hover {
+    color: $brown-color;
+    font-weight: 500;
+  }
+  .sidebar-toggle-btn {
+    background-color: $primary-color;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 35px;
+    cursor: pointer;
+    border: none;
+    color: $brown-color;
+  }
+}
+.sidebar-container.open {
+  left: 1px;
+  background-color: $primary-color;
+  left: -1px;
+  box-shadow: $brown-color 4px 4px 4px 5000px;
+}

@@ -1,0 +1,57 @@
+@import "../../styles/config";
+
+.full-recipe {
+  display: flex;
+  width: 70%;
+  margin: 200px 0 0 300px;
+  padding: 40px 40px;
+  border: $brown-color 3px solid;
+  border-radius: 7px;
+  background-color: $brown-color;
+  box-shadow: 10px 10px 8px $brown-color;
+  h2 {
+    color: $brown-color;
+    text-align: center;
+    padding-bottom: 50px;
+    font-size: 30px;
+  }
+  p {
+    color: $brown-color;
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  ul {
+    text-align: left;
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  ol {
+    text-align: left;
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  li {
+    text-align: left;
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  img {
+    width: auto;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  .left-column {
+    margin-right: 50px;
+    border: $brown-color 3px solid;
+    border-radius: 7px;
+    background-color: $primary-color;
+    text-align: center;
+  }
+  .right-column {
+    border: $brown-color 3px solid;
+    border-radius: 7px;
+    padding: 20px;
+    background-color: $primary-color;
+  }
+}

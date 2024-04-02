@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from "react";
-import JustLogo from "../../components/justlogo/JustLogo";
+import Navbar from "../../components/navbar/Navbar";
 import Sidebar from "../../components/sidebar/Sidebar";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import { LuVegan } from "react-icons/lu";
-import leafBg from "/leafbg.png";
 import "./recipe.css";
 import { Helmet } from "react-helmet";
 
@@ -39,10 +38,10 @@ function Recipe() {
     <>
       <Helmet>
         <meta charSet="utf-8" />
-        <title>{recipeTitle} plantpleaser</title>
-        <link rel="canonical" href="https://plantpleaser.netlify.app/" />
+        <title>{recipeTitle} - Avocado</title>
+        <link rel="canonical" href="https://vegavocado.netlify.app/" />
       </Helmet>
-      <JustLogo />
+      <Navbar />
       <Sidebar />
       {details && (
         <div className="full-recipe">
@@ -99,9 +98,6 @@ function Recipe() {
           </div>
         </div>
       )}
-      <div className="big-leaf-bg">
-        <img src={leafBg} />
-      </div>
     </>
   );
 }

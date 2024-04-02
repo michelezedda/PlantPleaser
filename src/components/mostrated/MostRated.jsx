@@ -87,9 +87,7 @@ function MostRated() {
             className="card"
             id="load-more"
             onClick={loadMoreMostRatedRecipes}
-          >
-            <h4>Load More Recipes</h4>
-          </div>
+          ></div>
         </div>
       </div>
     </>

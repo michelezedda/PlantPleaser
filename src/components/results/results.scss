@@ -1,0 +1,52 @@
+@import "../../styles/config";
+
+.search-result-container {
+  padding: 150px 300px 70px 400px;
+  margin-bottom: 60px;
+  h2 {
+    margin-bottom: 60px;
+    text-align: center;
+    font-size: 40px;
+  }
+  .search-result {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-auto-rows: max-content;
+    row-gap: 30px;
+    column-gap: 20px;
+  }
+  .result {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    color: $gray-color;
+    box-shadow: 4px 4px 4px $gray-color;
+    width: 100%;
+    background-color: #ffffff;
+    transition: background 0.5s, transform 0.5s;
+    height: 220px;
+    overflow: hidden;
+    padding-bottom: 12px;
+    h4 {
+      padding: 5px 10px;
+      margin: 0;
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+    }
+    img {
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+      width: 100%;
+      height: auto;
+    }
+    .result:hover {
+      background-color: #7e7e7e3a;
+      transform: translateY(-10px);
+      color: #000000;
+    }
+  }
+}

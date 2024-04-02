@@ -80,9 +80,11 @@ function Popular() {
               </div>
             </Link>
           ))}
-          <div className="card" id="load-more" onClick={loadMoreRandomRecipes}>
-            <h4>Load More Recipes</h4>
-          </div>
+          <div
+            className="card"
+            id="load-more"
+            onClick={loadMoreRandomRecipes}
+          ></div>
         </div>
       </div>
     </>
