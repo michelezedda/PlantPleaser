@@ -1,12 +1,12 @@
 <h1 align="center">
   <br>
-    <img src="https://plantpleaser.netlify.app/logo.png" width="400">
+    <img src="https://vegavocado.netlify.app/logo.png" width="400">
   <br>
-  plantpleaser
+  Avocado
   <br>
 </h1>
 
-<h2 align="center">Unlock a world of delicious vegetarian possibilities</h2>
+<h2 align="center">Unlock a world of delicious vegetarian possibilities with a diverse array of dishes, easy-to-follow instructions, and delicious recipes.</h2>
 
 ## Key Features
 
@@ -31,5 +31,5 @@
 
 ## Project Link
 
-You can try plantpleaser by clicking the following link :link: [plantpleaser](https://plantpleaser.netlify.app/) <br/>
-[![Netlify Status](https://api.netlify.com/api/v1/badges/d0b26866-ac5a-48d8-a830-9f9be2fb53d8/deploy-status)](https://app.netlify.com/sites/plantpleaser/deploys)
+You can try Avocado by clicking the following link :link: [plantpleaser](https://vegavocado.netlify.app/) <br/>
+[![Netlify Status](https://api.netlify.com/api/v1/badges/d0b26866-ac5a-48d8-a830-9f9be2fb53d8/deploy-status)](https://app.netlify.com/sites/vegavocado/deploys)
