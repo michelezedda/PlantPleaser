@@ -1,1 +1,19 @@
 @import "../../styles/config";
+
+.footer-container {
+  display: flex;
+  justify-content: center;
+  background-color: rgba($brown-color, 0.5);
+  padding: 50px 0;
+  h3 {
+    color: $primary-color;
+    font-size: 24px;
+    font-weight: lighter;
+  }
+  .social-media {
+    i {
+      color: $primary-color;
+      font-size: 30px;
+    }
+  }
+}

@@ -7,9 +7,7 @@ function Download() {
   return (
     <>
       <div className="download-container">
-        <img src={MyPhone} alt="phone" />
-        <img src={AppStore} />
-        <img src={PlayStore} />
+        <img src={MyPhone} alt="phone" className="download-img" />
       </div>
     </>
   );
