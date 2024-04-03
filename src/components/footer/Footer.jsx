@@ -6,23 +6,26 @@ function Footer() {
   return (
     <>
       <div className="footer-container">
-        <h3>Follow us!</h3>
-        <div className="social-media">
-          <a href="https://www.facebook.com/" target="_blank">
-            <i>
-              <FaFacebookSquare /> &nbsp;
-            </i>
-          </a>
-          <a href="https://www.instagram.com/" target="_blank">
-            <i>
-              <FaInstagram /> &nbsp;
-            </i>
-          </a>
-          <a href="https://www.x.com/" target="_blank">
-            <i>
-              <FaXTwitter />
-            </i>
-          </a>
+        <div className="left-footer-container">
+          <h3>Follow us!</h3>
+          <div className="social-media">
+            <a href="https://www.facebook.com/" target="_blank">
+              <i>
+                <FaFacebookSquare /> &nbsp;
+              </i>
+            </a>
+            <a href="https://www.instagram.com/" target="_blank">
+              <i>
+                <FaInstagram /> &nbsp;
+              </i>
+            </a>
+            <a href="https://www.x.com/" target="_blank">
+              <i>
+                <FaXTwitter />
+              </i>
+            </a>
+          </div>
+          <div className="right-footer-container">NEWSLETTER</div>
         </div>
       </div>
     </>
