@@ -58,6 +58,7 @@ function Sidebar() {
           </ul>
         </div>
       </div>
+      {isOpen && <div className="overlay" onClick={closeSidebar} />}
     </>
   );
 }
