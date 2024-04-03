@@ -1,1 +1,11 @@
 @import "../../styles/config";
+
+.download-container {
+  justify-content: center;
+  margin-top: 200px;
+  display: flex;
+  color: $brown-color;
+  img {
+    width: auto;
+  }
+}
