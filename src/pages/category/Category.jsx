@@ -89,9 +89,7 @@ function Category() {
             className="card"
             id="load-more"
             onClick={loadMoreCategoryRecipes}
-          >
-            <h4>Load More Recipes</h4>
-          </div>
+          ></div>
         </div>
       </div>
     </>

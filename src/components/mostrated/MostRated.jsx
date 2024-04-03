@@ -21,7 +21,7 @@ function MostRated() {
           params: {
             apiKey: myKey,
             tags: "vegan, vegetarian",
-            number: "8",
+            number: "7",
           },
         }
       );
@@ -44,7 +44,7 @@ function MostRated() {
           params: {
             apiKey: myKey,
             tags: "vegan, vegetarian",
-            number: "10",
+            number: "8",
           },
         }
       );

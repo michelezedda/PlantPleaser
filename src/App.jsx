@@ -3,8 +3,9 @@ import React from "react";
 import Sidebar from "./components/sidebar/Sidebar";
 import Navbar from "./components/navbar/Navbar";
 import Results from "./components/results/Results";
-import Popular from "./components/popular/Popular";
 import MostRated from "./components/mostrated/MostRated";
+import Download from "./components/download/Download";
+import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
 import axios from "axios";
 import { Helmet } from "react-helmet";
@@ -46,13 +47,14 @@ function App() {
         handleSearch={handleSearch}
       />
       <Sidebar />
+      <Header />
       <Results
         searchResults={searchResults}
         setSearchResults={setSearchResults}
         searchRecipe={searchRecipe}
       />
-      <Popular />
       <MostRated />
+      <Download />
       <Footer />
     </>
   );
