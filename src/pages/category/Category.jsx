@@ -4,6 +4,8 @@ import { Link, useParams } from "react-router-dom";
 import { LuVegan } from "react-icons/lu";
 import Navbar from "../../components/navbar/Navbar";
 import Sidebar from "../../components/sidebar/Sidebar";
+import Download from "../../components/download/Download";
+import Footer from "../../components/footer/Footer";
 import "./category.css";
 import { Helmet } from "react-helmet";
 
@@ -92,6 +94,8 @@ function Category() {
           ></div>
         </div>
       </div>
+      <Download />
+      <Footer />
     </>
   );
 }

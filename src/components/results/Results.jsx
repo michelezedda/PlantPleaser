@@ -49,9 +49,11 @@ function Results({ searchResults, searchRecipe, setSearchResults }) {
                 </div>
               </Link>
             ))}
-            <div className="card" id="load-more" onClick={loadMoreRecipes}>
-              <h4>Load More Recipes</h4>
-            </div>
+            <div
+              className="card"
+              id="load-more"
+              onClick={loadMoreRecipes}
+            ></div>
           </div>
         </div>
       )}

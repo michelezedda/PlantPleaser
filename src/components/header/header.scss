@@ -1,1 +1,18 @@
 @import "../../styles/config";
+
+.header-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 100px;
+  .left-header-container {
+    h1 {
+      color: $brown-color;
+    }
+  }
+  .right-header-container {
+    img {
+      width: auto;
+    }
+  }
+}

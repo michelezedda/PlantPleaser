@@ -2,10 +2,33 @@
 
 .download-container {
   justify-content: center;
-  margin-top: 200px;
   display: flex;
+  flex-wrap: wrap;
+  flex-shrink: 0;
   color: $brown-color;
-  .download-img {
+  .left-download-container {
+    display: flex;
+    flex-direction: column;
+    h2 {
+      padding-top: 200px;
+      font-size: 40px;
+      font-weight: lighter;
+    }
+    .appstore-img {
+      display: inline-block;
+      width: 35%;
+      margin-bottom: 10px;
+    }
+    .playstore-img {
+      width: 35%;
+    }
+  }
+  .right-download-container {
+    display: flex;
+    flex-direction: column;
     width: auto;
+    .download-img {
+      margin-top: auto;
+    }
   }
 }
