@@ -3,31 +3,30 @@ import { FaFacebookSquare, FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 
 function Footer() {
+  const currentYear = new Date().getFullYear();
+
   return (
     <>
-      <div className="footer-container">
-        <div className="left-footer-container">
+      <footer>
+        <div className="footer-container">
           <h3>Follow us!</h3>
           <div className="social-media">
             <a href="https://www.facebook.com/" target="_blank">
-              <i>
-                <FaFacebookSquare /> &nbsp;
-              </i>
+              <FaFacebookSquare /> &nbsp;
             </a>
             <a href="https://www.instagram.com/" target="_blank">
-              <i>
-                <FaInstagram /> &nbsp;
-              </i>
+              <FaInstagram /> &nbsp;
             </a>
             <a href="https://www.x.com/" target="_blank">
-              <i>
-                <FaXTwitter />
-              </i>
+              <FaXTwitter />
             </a>
           </div>
-          <div className="right-footer-container">NEWSLETTER</div>
+          <p>
+            Copyright © {currentYear} Avocado | All rights reserved |{" "}
+            <span> Terms and Conditions</span> | <span>About us</span>
+          </p>
         </div>
-      </div>
+      </footer>
     </>
   );
 }

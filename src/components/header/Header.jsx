@@ -3,8 +3,15 @@ import AvocadoSplash from "../../../public/avocado-splash.png";
 import Healthy from "../../../public/healthy.png";
 import Vegetarian from "../../../public/vegetarian.png";
 import Tasty from "../../../public/tasty.png";
+import { useState } from "react";
 
 function Header() {
+  const [isChecked, setIsChecked] = useState(false);
+
+  const handleCheckboxChange = () => {
+    setIsChecked(!isChecked);
+  };
+
   return (
     <>
       <div className="header-container">
