@@ -16,7 +16,7 @@ function Header() {
     <>
       <div className="header-container">
         <div className="left-header-container">
-          <h1>Your favorite vegeterian recipes</h1>
+          <h1>Your favorite vegetarian recipes</h1>
           <div className="icons">
             <img src={Vegetarian} />
             <img src={Healthy} />
