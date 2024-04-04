@@ -2,12 +2,21 @@
 
 .header-container {
   display: flex;
-  justify-content: center;
+  padding: 100px 200px;
+  justify-content: space-around;
   align-items: center;
-  padding-top: 100px;
   .left-header-container {
     h1 {
+      font-weight: lighter;
+      text-align: center;
       color: $brown-color;
+    }
+    .icons {
+      display: flex;
+      justify-content: center;
+      img {
+        width: 250px;
+      }
     }
   }
   .right-header-container {

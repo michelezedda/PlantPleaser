@@ -6,21 +6,29 @@
   flex-wrap: wrap;
   flex-shrink: 0;
   color: $brown-color;
-  text-align: start;
+  text-align: left;
+  gap: 100px;
   .left-download-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    width: 50%;
     h2 {
       text-align: left;
       font-size: 40px;
       font-weight: lighter;
+      margin: 0;
     }
-    .appstore-img {
-      width: 35%;
+    p {
+      font-size: 22px;
     }
-    .playstore-img {
-      width: 35%;
+    .download-icons {
+      a {
+        margin-right: 30px;
+      }
+      img {
+        width: 230px;
+      }
     }
   }
   .right-download-container {

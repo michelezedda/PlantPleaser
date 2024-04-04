@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Navbar from "../../components/navbar/Navbar";
 import Sidebar from "../../components/sidebar/Sidebar";
+import Download from "../../components/download/Download";
+import Footer from "../../components/footer/Footer";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import { LuVegan } from "react-icons/lu";
@@ -38,55 +40,57 @@ function Recipe() {
     <>
       <Helmet>
         <meta charSet="utf-8" />
-        <title>{recipeTitle} - Avocado</title>
+        <title>{recipeTitle}</title>
         <link rel="canonical" href="https://vegavocado.netlify.app/" />
       </Helmet>
       <Navbar />
       <Sidebar />
       {details && (
         <div className="full-recipe">
-          <div className="left-column">
-            <h2>
+          <h2>
+            <i>
               <LuVegan />
-              &nbsp;{details.title}
-            </h2>
-            <img
-              src={details.image}
-              alt={details.title}
-              onError={(event) => {
-                event.target.src = "default-pic.png";
-              }}
-            />
-          </div>
-          <div className="right-column">
-            <p>
-              <b>Servings:</b> {details.servings}{" "}
-            </p>
-            <p>
-              <b>Ready In:</b> {details.readyInMinutes} minutes
-            </p>
-            <p>
-              <b>Diet:</b>{" "}
-              {details.diets
-                ? details.diets.join(", ")
-                : "No diet information available"}
-            </p>
-            <p>
-              <b>Ingredients:</b>{" "}
-            </p>
-            <ul>
-              {details.extendedIngredients ? (
-                details.extendedIngredients.map((ingredient, index) => (
-                  <li key={index}>{ingredient.original}</li>
-                ))
-              ) : (
-                <li>No ingredients information available</li>
-              )}
-            </ul>
+            </i>
+            &nbsp;{details.title}
+          </h2>
+          <img
+            src={details.image}
+            alt={details.title}
+            onError={(event) => {
+              event.target.src = "default-pic.png";
+            }}
+          />
+          <div className="info-container">
+            <div>
+              <p>
+                <b>Servings: </b> {details.servings}
+              </p>
+              <p>
+                <b>Ready In: </b> {details.readyInMinutes} minutes
+              </p>
+              <p>
+                <b>Diet: </b>
+                {details.diets
+                  ? details.diets.join(", ")
+                  : "No diet information available"}
+              </p>
+              <p>
+                <b>Ingredients:</b>
+              </p>
+              <ul>
+                {details.extendedIngredients ? (
+                  details.extendedIngredients.map((ingredient, index) => (
+                    <li key={index}>{ingredient.original}</li>
+                  ))
+                ) : (
+                  <li>No ingredients information available</li>
+                )}
+              </ul>
+            </div>
             {details.analyzedInstructions && (
               <div>
                 <p>
-                  <b>Instructions:</b>{" "}
+                  <b>Instructions:</b>
                 </p>
                 <ol>
                   {details.analyzedInstructions[0].steps.map((step) => (
@@ -98,6 +102,8 @@ function Recipe() {
           </div>
         </div>
       )}
+      <Download />
+      <Footer />
     </>
   );
 }
