@@ -2,10 +2,11 @@ import React from "react";
 import PropTypes from "prop-types";
 import myLogo from "/logo.png";
 import { FaSearch } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./navbar.css";
 
 function Navbar({ searchRecipe, setSearchRecipe, handleSearch }) {
+  const navigate = useNavigate();
   const handleChange = (e) => {
     setSearchRecipe(e.target.value);
   };
@@ -13,6 +14,7 @@ function Navbar({ searchRecipe, setSearchRecipe, handleSearch }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     handleSearch();
+    navigate("/results");
   };
 
   return (

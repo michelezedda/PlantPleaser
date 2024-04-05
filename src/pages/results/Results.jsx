@@ -2,8 +2,12 @@ import { Link } from "react-router-dom";
 import { LuVegan } from "react-icons/lu";
 import axios from "axios";
 import "./results.css";
+import Navbar from "../../components/navbar/Navbar";
+import Sidebar from "../../components/sidebar/Sidebar";
+import Download from "../../components/download/Download";
+import Footer from "../../components/footer/Footer";
 
-function Results({ searchResults, searchRecipe, setSearchResults }) {
+function Results({ searchResults, setSearchResults, searchRecipe }) {
   const loadMoreRecipes = async () => {
     const myKey = import.meta.env.VITE_SPOONACULAR_KEY;
     try {
@@ -26,7 +30,9 @@ function Results({ searchResults, searchRecipe, setSearchResults }) {
 
   return (
     <>
-      {searchResults.length > 0 && (
+      <Navbar />
+      <Sidebar />
+      {searchResults && searchResults.length > 0 && (
         <div className="search-result-container">
           <h2>
             Your results for <em>{searchRecipe}</em>
@@ -57,6 +63,8 @@ function Results({ searchResults, searchRecipe, setSearchResults }) {
           </div>
         </div>
       )}
+      <Download />
+      <Footer />
     </>
   );
 }

@@ -2,7 +2,6 @@ import { useState } from "react";
 import React from "react";
 import Sidebar from "./components/sidebar/Sidebar";
 import Navbar from "./components/navbar/Navbar";
-import Results from "./components/results/Results";
 import MostRated from "./components/mostrated/MostRated";
 import Download from "./components/download/Download";
 import Header from "./components/header/Header";
@@ -48,11 +47,6 @@ function App() {
       />
       <Sidebar />
       <Header />
-      <Results
-        searchResults={searchResults}
-        setSearchResults={setSearchResults}
-        searchRecipe={searchRecipe}
-      />
       <MostRated />
       <Download />
       <Footer />
