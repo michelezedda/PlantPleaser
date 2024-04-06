@@ -1,8 +1,7 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./styles/index.css";
-import { createRoot } from "react-dom/client";
 import App from "./App.jsx";
 import Recipe from "./pages/recipe/Recipe.jsx";
 import NotFoundPage from "./pages/notfoundpage/NotFoundPage.jsx";
