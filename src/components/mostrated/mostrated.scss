@@ -14,7 +14,7 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 5px;
   }
   .rated {
     flex: 1 1 calc(16.666% - 20px);
@@ -83,7 +83,7 @@
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
-      gap: 20px;
+      gap: 0;
     }
     .rated {
       flex: 1 1 calc(16.666% - 20px);
