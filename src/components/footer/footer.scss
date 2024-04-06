@@ -1,6 +1,7 @@
 @import "../../styles/config";
 
 footer {
+  padding: 40px 10px 20px 10px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -10,11 +11,6 @@ footer {
   color: $primary-color;
   .footer-container {
     text-align: center;
-    h3 {
-      font-size: 24px;
-      font-weight: lighter;
-      margin-right: 10px;
-    }
     .social-media {
       a {
         color: $primary-color;

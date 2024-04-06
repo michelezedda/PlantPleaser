@@ -9,7 +9,6 @@ function Footer() {
     <>
       <footer>
         <div className="footer-container">
-          <h3>Follow us!</h3>
           <div className="social-media">
             <a href="https://www.facebook.com/" target="_blank">
               <FaFacebookSquare /> &nbsp;
