@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import { LuVegan } from "react-icons/lu";
 import "./mostrated.css";
 
 function MostRated() {
@@ -76,10 +75,7 @@ function MostRated() {
                     event.target.src = "default-pic.png";
                   }}
                 />
-                <h4>
-                  <LuVegan />
-                  &nbsp;{mostRatedRecipe.title}
-                </h4>
+                <h4>&nbsp;{mostRatedRecipe.title}</h4>
               </div>
             </Link>
           ))}

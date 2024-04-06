@@ -22,7 +22,7 @@ function Footer() {
             </a>
           </div>
           <p>
-            Copyright © {currentYear} Avocado | All rights reserved |{" "}
+            Copyright © {currentYear} Avocado - All rights reserved |{" "}
             <span> Terms and Conditions</span> | <span>About us</span>
           </p>
         </div>

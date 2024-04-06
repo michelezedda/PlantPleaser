@@ -5,7 +5,6 @@ import Download from "../../components/download/Download";
 import Footer from "../../components/footer/Footer";
 import { useParams } from "react-router-dom";
 import axios from "axios";
-import { LuVegan } from "react-icons/lu";
 import "./recipe.css";
 import { Helmet } from "react-helmet";
 
@@ -47,12 +46,7 @@ function Recipe() {
       <Sidebar />
       {details && (
         <div className="full-recipe">
-          <h2>
-            <i>
-              <LuVegan />
-            </i>
-            &nbsp;{details.title}
-          </h2>
+          <h2>&nbsp;{details.title}</h2>
           <img
             src={details.image}
             alt={details.title}

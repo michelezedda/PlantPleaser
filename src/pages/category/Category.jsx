@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link, useParams } from "react-router-dom";
-import { LuVegan } from "react-icons/lu";
 import Navbar from "../../components/navbar/Navbar";
 import Sidebar from "../../components/sidebar/Sidebar";
 import Download from "../../components/download/Download";
@@ -80,10 +79,7 @@ function Category() {
                     event.target.src = "default-pic.png";
                   }}
                 />
-                <h4>
-                  <LuVegan />
-                  &nbsp;{categoryRecipe.title}
-                </h4>
+                <h4>&nbsp;{categoryRecipe.title}</h4>
               </div>
             </Link>
           ))}

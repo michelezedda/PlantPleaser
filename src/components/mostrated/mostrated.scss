@@ -1,11 +1,11 @@
 @import "../../styles/config";
 
 .most-rated-container {
-  padding: 100px 20px;
+  padding: 30px 20px 80px 20px;
   background-color: $bg-color-2;
   h2 {
     color: $brown-color;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
     text-align: center;
     font-size: 45px;
     font-weight: lighter;
@@ -62,6 +62,8 @@
         padding: 100%;
         width: 100%;
         background-color: rgba(206, 169, 118, 0.5);
+        font-weight: lighter;
+        font-size: 22px;
       }
     }
   }

@@ -2,7 +2,7 @@
 
 .full-recipe {
   background-color: $bg-color-3;
-  padding: 150px 50px;
+  padding: 100px 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -13,17 +13,15 @@
     width: 999px;
     color: $brown-color;
     padding-bottom: 20px;
-    font-size: 40px;
+    font-size: 45px;
     font-weight: lighter;
-    i {
-      font-size: 30px;
-      margin-right: 10px;
-    }
   }
   img {
+    border: 3px solid $brown-color;
+    box-shadow: 4px 4px 4px #6e4e2e2f;
     width: 999px;
     height: 400px;
-    object-fit: cover;
+    object-fit: center;
     border-radius: 5px;
     margin-bottom: 10px;
   }
@@ -39,7 +37,7 @@
     li {
       line-height: 30px;
       color: $brown-color;
-      font-size: 20px;
+      font-size: 22px;
     }
   }
 }

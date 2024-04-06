@@ -1,7 +1,10 @@
 import Navbar from "../../components/navbar/Navbar";
 import Sidebar from "../../components/sidebar/Sidebar";
+import Download from "../../components/download/Download";
+import Footer from "../../components/footer/Footer";
 import "./notfoundpage.css";
 import { Helmet } from "react-helmet";
+import Avocado404 from "../../../public/404avocado.png";
 
 function NotFoundPage() {
   return (
@@ -14,8 +17,11 @@ function NotFoundPage() {
       <Navbar />
       <Sidebar />
       <div className="not-found-container">
-        <h1>Oops! Looks like this page went vegging out somewhere.</h1>
+        <h2>Oops! Looks like this page went vegging out somewhere.</h2>
+        <img src={Avocado404} />
       </div>
+      <Download />
+      <Footer />
     </>
   );
 }

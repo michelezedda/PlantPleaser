@@ -1,11 +1,34 @@
-import React from "react";
+import React, { useState } from "react";
+import axios from "axios";
 import PropTypes from "prop-types";
 import myLogo from "/logo.png";
 import { FaSearch } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
 import "./navbar.css";
 
-function Navbar({ searchRecipe, setSearchRecipe, handleSearch }) {
+function Navbar({ setSearchResults }) {
+  const [searchRecipe, setSearchRecipe] = useState("");
+
+  const handleSearch = async () => {
+    const myKey = import.meta.env.VITE_SPOONACULAR_KEY;
+    try {
+      const response = await axios.get(
+        "https://api.spoonacular.com/recipes/complexSearch",
+        {
+          params: {
+            apiKey: myKey,
+            query: searchRecipe,
+            tags: "vegan, vegetarian",
+            number: "8",
+          },
+        }
+      );
+      setSearchResults(response.data?.results || []);
+    } catch (error) {
+      console.error("Error fetching data", error);
+    }
+  };
+
   const navigate = useNavigate();
   const handleChange = (e) => {
     setSearchRecipe(e.target.value);
@@ -44,9 +67,7 @@ function Navbar({ searchRecipe, setSearchRecipe, handleSearch }) {
 }
 
 Navbar.propTypes = {
-  searchRecipe: PropTypes.string.isRequired,
-  setSearchRecipe: PropTypes.func.isRequired,
-  handleSearch: PropTypes.func.isRequired,
+  setSearchResults: PropTypes.func.isRequired,
 };
 
 export default Navbar;
