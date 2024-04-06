@@ -21,8 +21,11 @@ function Footer() {
             </a>
           </div>
           <p>
-            Copyright © {currentYear} Avocado - All rights reserved |{" "}
-            <span> Terms and Conditions</span> | <span>About us</span>
+            Copyright © {currentYear} Avocado - All rights reserved &nbsp; |
+            &nbsp;
+            <span>About us</span> &nbsp; | &nbsp;{" "}
+            <span> Terms and Conditions</span> &nbsp; | &nbsp;{" "}
+            <span>Cookie Policy</span>
           </p>
         </div>
       </footer>

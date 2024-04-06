@@ -2,7 +2,7 @@
 
 .categories-container {
   padding: 100px 0;
-  background-color: $bg-color-2;
+  background-color: $bg-color-3;
   h2 {
     font-weight: lighter;
     color: $brown-color;
@@ -70,7 +70,7 @@
 @media screen and (max-width: 800px) {
   .categories-container {
     padding: 120px 10px 80px 10px;
-    background-color: $bg-color-2;
+    background-color: $bg-color-3;
     h2 {
       font-weight: lighter;
       color: $brown-color;

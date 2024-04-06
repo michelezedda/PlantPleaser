@@ -2,7 +2,7 @@
 
 .most-rated-container {
   padding: 100px 20px 80px 20px;
-  background-color: $bg-color-2;
+  background-color: $bg-color-3;
   h2 {
     color: $brown-color;
     margin-bottom: 50px;
@@ -71,7 +71,7 @@
 @media screen and (max-width: 800px) {
   .most-rated-container {
     padding: 120px 10px 80px 10px;
-    background-color: $bg-color-2;
+    background-color: $bg-color-3;
     h2 {
       color: $brown-color;
       margin-bottom: 50px;
