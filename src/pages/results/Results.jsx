@@ -21,7 +21,7 @@ function Results({ searchResults, setSearchResults }) {
           params: {
             apiKey: myKey,
             query: searchRecipe,
-            tags: `vegan, vegetarian, ${myResult}`,
+            tags: `vegan, vegetarian,`,
             number: "10",
           },
         }

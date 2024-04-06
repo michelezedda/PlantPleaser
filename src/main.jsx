@@ -8,25 +8,19 @@ import NotFoundPage from "./pages/notfoundpage/NotFoundPage.jsx";
 import Category from "./pages/category/Category.jsx";
 import Results from "./pages/results/Results.jsx";
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <App />,
-    errorElement: <NotFoundPage />,
-  },
-  {
-    path: "/recipe/:id",
-    element: <Recipe />,
-  },
-  {
-    path: "/category/:category",
-    element: <Category />,
-  },
+const setSearchResults = () => {};
+
+const routes = [
+  { path: "/", element: <App setSearchResults={setSearchResults} /> },
+  { path: "/recipe/:id", element: <Recipe /> },
+  { path: "/category/:category", element: <Category /> },
   {
     path: "/results",
-    element: <Results />,
+    element: <Results setSearchResults={setSearchResults} />,
   },
-]);
+];
+
+const router = createBrowserRouter(routes);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
