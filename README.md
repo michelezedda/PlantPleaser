@@ -31,5 +31,6 @@
 
 ## Project Link
 
-You can try Avocado by clicking the following link :link: [plantpleaser](https://vegavocado.netlify.app/) <br/>
-[![Netlify Status](https://api.netlify.com/api/v1/badges/d0b26866-ac5a-48d8-a830-9f9be2fb53d8/deploy-status)](https://app.netlify.com/sites/vegavocado/deploys)
+You can try Avocado by clicking the following link :link: [Avocado](https://vegavocado.netlify.app/) <br/>
+[![Netlify Status](https://api.netlify.com/api/v1/badges/6346b06e-2ee8-465d-95fc-83ef491f9403/deploy-status)](https://app.netlify.com/sites/vegavocado/deploys)
+
