@@ -31,7 +31,7 @@
     font-weight: bold;
   }
   .sidebar-toggle-btn {
-    background-color: $primary-color;
+    background-color: $bg-color-3;
     position: absolute;
     top: 20px;
     right: 20px;
@@ -92,7 +92,7 @@
       font-weight: bold;
     }
     .sidebar-toggle-btn {
-      background-color: $primary-color;
+      background-color: $bg-color-3;
       position: absolute;
       top: 10px;
       right: 20px;
@@ -105,7 +105,7 @@
   }
   .sidebar-container.open {
     left: 1px;
-    background-color: $primary-color;
+    background-color: $bg-color-3;
     left: -1px;
   }
   .overlay {
@@ -120,7 +120,6 @@
     transition: opacity 0.3s ease;
   }
 }
-
 @media screen and (min-width: 800.02px) and (max-width: 1190px) {
   .sidebar-container {
     height: 100%;
@@ -153,7 +152,7 @@
       font-weight: bold;
     }
     .sidebar-toggle-btn {
-      background-color: $primary-color;
+      background-color: $bg-color-3;
       position: absolute;
       top: 15px;
       right: 20px;
@@ -166,7 +165,7 @@
   }
   .sidebar-container.open {
     left: 1px;
-    background-color: $primary-color;
+    background-color: $bg-color-3;
     left: -1px;
   }
   .overlay {
