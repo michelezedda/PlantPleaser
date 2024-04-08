@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import axios from "axios";
 import "./results.css";
@@ -9,9 +9,11 @@ import Download from "../../components/download/Download";
 import Footer from "../../components/footer/Footer";
 
 function Results() {
-  const { myResult } = useParams();
   const [searchResults, setSearchResults] = useState([]);
-  const [searchRecipe, setSearchRecipe] = useState("");
+  const [currentPage, setCurrentPage] = useState(1);
+  const location = useLocation();
+  const queryParams = new URLSearchParams(location.search);
+  const searchRecipe = queryParams.get("query") || "";
 
   const loadMoreRecipes = async () => {
     const myKey = import.meta.env.VITE_SPOONACULAR_KEY;
@@ -24,10 +26,15 @@ function Results() {
             query: searchRecipe,
             tags: `vegan, vegetarian,`,
             number: "8",
+            offset: (currentPage - 1) * 8,
           },
         }
       );
-      setSearchResults(response.data?.results || []);
+      setSearchResults((prevResults) => [
+        ...prevResults,
+        ...response.data?.results,
+      ]);
+      setCurrentPage((prevPage) => prevPage + 1);
     } catch (error) {
       console.error("Error fetching more data:", error);
     }
@@ -35,21 +42,19 @@ function Results() {
 
   useEffect(() => {
     loadMoreRecipes();
-  }, []);
+  }, [searchRecipe]);
 
   return (
     <>
       <Helmet>
         <meta charSet="utf-8" />
-        <title>{`Avocado: ${myResult}`}</title>
+        <title>{`Avocado: your results`}</title>
         <link rel="canonical" href="https://vegavocado.netlify.app/" />
       </Helmet>
       <Navbar setSearchResults={setSearchResults} />
       <Sidebar />
       <div className="search-result-container">
-        <h2>
-          Your results for <em>{searchRecipe}</em>
-        </h2>
+        <h2>Your results:</h2>
         <div className="search-result">
           {searchResults.map((recipe) => (
             <Link to={`/recipe/${recipe.id}`} key={recipe.id}>
@@ -65,6 +70,7 @@ function Results() {
               </div>
             </Link>
           ))}
+          <div className="card" id="load-more" onClick={loadMoreRecipes}></div>
         </div>
       </div>
       <Download />
