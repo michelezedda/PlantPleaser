@@ -35,7 +35,7 @@ function Results() {
 
   useEffect(() => {
     loadMoreRecipes();
-  }, []); // Esegui una volta al caricamento della pagina
+  }, []);
 
   return (
     <>
