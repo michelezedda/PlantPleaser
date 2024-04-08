@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import Sidebar from "./components/sidebar/Sidebar";
 import Navbar from "./components/navbar/Navbar";
 import MostRated from "./components/mostrated/MostRated";

@@ -1,6 +1,6 @@
 import React from "react";
-import ReactDOM from "react-dom/client";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import ReactDOM from "react-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./styles/index.css";
 import App from "./App.jsx";
 import Recipe from "./pages/recipe/Recipe.jsx";
@@ -8,22 +8,16 @@ import NotFoundPage from "./pages/notfoundpage/NotFoundPage.jsx";
 import Category from "./pages/category/Category.jsx";
 import Results from "./pages/results/Results.jsx";
 
-const setSearchResults = () => {};
-
-const routes = [
-  { path: "/", element: <App setSearchResults={setSearchResults} /> },
-  { path: "/recipe/:id", element: <Recipe /> },
-  { path: "/category/:category", element: <Category /> },
-  {
-    path: "/results",
-    element: <Results setSearchResults={setSearchResults} />,
-  },
-];
-
-const router = createBrowserRouter(routes);
-
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <Router>
+      <Routes>
+        <Route path="/" element={<App />} />
+        <Route path="/recipe/:id" element={<Recipe />} />
+        <Route path="/category/:category" element={<Category />} />
+        <Route path="/results" element={<Results />} />
+        <Route path="*" element={<NotFoundPage />} />
+      </Routes>
+    </Router>
   </React.StrictMode>
 );
