@@ -23,7 +23,7 @@ function Results() {
             apiKey: myKey,
             query: searchRecipe,
             tags: `vegan, vegetarian,`,
-            number: "10",
+            number: "8",
           },
         }
       );
