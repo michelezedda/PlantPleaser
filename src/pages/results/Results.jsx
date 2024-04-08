@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import axios from "axios";
@@ -27,11 +27,15 @@ function Results() {
           },
         }
       );
-      setSearchResults([...searchResults, ...(response.data?.results || [])]);
+      setSearchResults(response.data?.results || []);
     } catch (error) {
       console.error("Error fetching more data:", error);
     }
   };
+
+  useEffect(() => {
+    loadMoreRecipes();
+  }, []); // Esegui una volta al caricamento della pagina
 
   return (
     <>
@@ -42,34 +46,27 @@ function Results() {
       </Helmet>
       <Navbar setSearchResults={setSearchResults} />
       <Sidebar />
-      {searchResults && searchResults.length > 0 && (
-        <div className="search-result-container">
-          <h2>
-            Your results for <em>{searchRecipe}</em>
-          </h2>
-          <div className="search-result">
-            {searchResults.map((recipe) => (
-              <Link to={`/recipe/${recipe.id}`} key={recipe.id}>
-                <div className="result">
-                  <img
-                    src={recipe.image}
-                    alt={recipe.title}
-                    onError={(event) => {
-                      event.target.src = "default-pic.png";
-                    }}
-                  />
-                  <h4>&nbsp;{recipe.title}</h4>
-                </div>
-              </Link>
-            ))}
-            <div
-              className="card"
-              id="load-more"
-              onClick={loadMoreRecipes}
-            ></div>
-          </div>
+      <div className="search-result-container">
+        <h2>
+          Your results for <em>{searchRecipe}</em>
+        </h2>
+        <div className="search-result">
+          {searchResults.map((recipe) => (
+            <Link to={`/recipe/${recipe.id}`} key={recipe.id}>
+              <div className="result">
+                <img
+                  src={recipe.image}
+                  alt={recipe.title}
+                  onError={(event) => {
+                    event.target.src = "default-pic.png";
+                  }}
+                />
+                <h4>&nbsp;{recipe.title}</h4>
+              </div>
+            </Link>
+          ))}
         </div>
-      )}
+      </div>
       <Download />
       <Footer />
     </>
