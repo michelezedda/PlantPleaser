@@ -24,7 +24,7 @@ function Results() {
           params: {
             apiKey: myKey,
             query: searchRecipe,
-            tags: `vegan, vegetarian,`,
+            tags: `vegan, vegetarian`,
             number: "8",
             offset: (currentPage - 1) * 8,
           },
