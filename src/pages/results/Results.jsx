@@ -25,6 +25,7 @@ function Results() {
             apiKey: myKey,
             query: searchRecipe,
             tags: `vegan, vegetarian`,
+            diet: "vegan, vegetarian",
             number: "8",
             offset: (currentPage - 1) * 8,
           },
@@ -48,13 +49,13 @@ function Results() {
     <>
       <Helmet>
         <meta charSet="utf-8" />
-        <title>{`Avocado: your results`}</title>
+        <title>{`Your results for ${searchRecipe}`}</title>
         <link rel="canonical" href="https://vegavocado.netlify.app/" />
       </Helmet>
       <Navbar setSearchResults={setSearchResults} />
       <Sidebar />
       <div className="search-result-container">
-        <h2>Your results:</h2>
+        <h2>Your results for "{searchRecipe}"</h2>
         <div className="search-result">
           {searchResults.map((recipe) => (
             <Link to={`/recipe/${recipe.id}`} key={recipe.id}>

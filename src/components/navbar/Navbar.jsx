@@ -19,6 +19,7 @@ function Navbar({ setSearchResults }) {
             apiKey: myKey,
             query: searchRecipe,
             tags: "vegan, vegetarian",
+            diet: "vegan, vegetarian",
             number: "8",
           },
         }
@@ -37,7 +38,7 @@ function Navbar({ setSearchResults }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     handleSearch();
-    navigate("/results");
+    navigate(`/results?query=${encodeURIComponent(searchRecipe)}`);
   };
 
   return (
