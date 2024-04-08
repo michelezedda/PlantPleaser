@@ -38,11 +38,10 @@
   border: 1px none $brown-color;
   background-color: $primary-color;
   color: $brown-color;
-  border-radius: 30px;
-  font-size: 18px;
+  border-radius: 25px;
+  font-size: 20px;
   margin-left: -55px;
-  margin-top: 2px;
-  padding: 8px 22px;
+  padding: 6px 21px;
   cursor: pointer;
 }
 .search-btn:hover {
@@ -84,7 +83,7 @@
       border: 3px solid $brown-color;
       border-radius: 30px;
       margin-right: -10px;
-      padding: 4px 150px 4px 20px;
+      padding: 4px 120px 4px 20px;
       input:focus {
         outline: none;
         color: $brown-color;
