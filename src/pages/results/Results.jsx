@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import axios from "axios";
@@ -8,8 +8,9 @@ import Sidebar from "../../components/sidebar/Sidebar";
 import Download from "../../components/download/Download";
 import Footer from "../../components/footer/Footer";
 
-function Results({ searchResults, setSearchResults }) {
+function Results() {
   const { myResult } = useParams();
+  const [searchResults, setSearchResults] = useState([]);
   const [searchRecipe, setSearchRecipe] = useState("");
 
   const loadMoreRecipes = async () => {
