@@ -79,7 +79,7 @@ function Comments() {
             <img src={comment.image} alt={comment.username} />
             <strong>{comment.username}: </strong>
             <br />
-            <span>{comment.text}</span>
+            <div className="comment">{comment.text}</div>
           </li>
         ))}
       </ul>
