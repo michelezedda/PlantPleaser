@@ -13,7 +13,7 @@ function App() {
     <>
       <Helmet>
         <meta charSet="utf-8" />
-        <title>Avocado</title>
+        <title>Avocado - Vegetarian recipes</title>
         <link rel="canonical" href="https://vegavocado.netlify.app/" />
       </Helmet>
       <Navbar setSearchResults={setSearchResults} />
