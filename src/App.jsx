@@ -5,6 +5,7 @@ import Sidebar from "./components/sidebar/Sidebar";
 import MostRated from "./components/mostrated/MostRated";
 import Download from "./components/download/Download";
 import Footer from "./components/footer/Footer";
+import Reviews from "./components/reviews/Reviews";
 
 function App() {
   const [searchResults, setSearchResults] = useState([]);
@@ -18,6 +19,7 @@ function App() {
       <Navbar setSearchResults={setSearchResults} />
       <Sidebar />
       <MostRated />
+      <Reviews />
       <Download />
       <Footer />
     </>

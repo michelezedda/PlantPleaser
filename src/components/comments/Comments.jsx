@@ -70,46 +70,48 @@ function Comments() {
   };
 
   return (
-    <div className="comments-container">
-      <h2>Comments</h2>
-      <p>Share your thoughts with the community!</p>
-      <ul>
-        {comments.map((comment) => (
-          <li key={comment.id}>
-            <img src={comment.image} alt={comment.username} />
-            <strong>{comment.username}: </strong>
-            <br />
-            <div className="comment">{comment.text}</div>
-          </li>
-        ))}
-      </ul>
-      <form onSubmit={handleCommentSubmit}>
-        <input
-          type="text"
-          value={username}
-          onChange={handleUsernameChange}
-          placeholder="Your Username"
-          pattern="[^\s]+"
-          title="Usernames cannot contain blank spaces"
-          maxLength={15}
-          required
-        />
-        <select value={selectedImage} onChange={handleImageChange} required>
-          <option value="">Select Your Avatar</option>
-          <option value={greenUser}>Green Avatar</option>
-          <option value={redUser}>Red Avatar</option>
-          <option value={blueUser}>Blue Avatar</option>
-        </select>
-        <textarea
-          value={newComment}
-          onChange={handleCommentChange}
-          placeholder="Add a comment"
-          maxLength={100}
-          required
-        />
-        <button type="submit">Submit</button>
-      </form>
-    </div>
+    <>
+      <div className="comments-container">
+        <h2>Comments</h2>
+        <p>Share your thoughts with the community!</p>
+        <ul>
+          {comments.map((comment) => (
+            <li key={comment.id}>
+              <img src={comment.image} /> &nbsp;
+              <strong>{comment.username}: </strong>
+              <br />
+              <div className="comment">{comment.text}</div>
+            </li>
+          ))}
+        </ul>
+        <form onSubmit={handleCommentSubmit}>
+          <input
+            type="text"
+            value={username}
+            onChange={handleUsernameChange}
+            placeholder="Your Username"
+            pattern="[^\s]+"
+            title="Usernames cannot contain blank spaces"
+            maxLength={15}
+            required
+          />
+          <select value={selectedImage} onChange={handleImageChange} required>
+            <option value="">Select Your Avatar</option>
+            <option value={greenUser}>Green Avatar</option>
+            <option value={redUser}>Red Avatar</option>
+            <option value={blueUser}>Blue Avatar</option>
+          </select>
+          <textarea
+            value={newComment}
+            onChange={handleCommentChange}
+            placeholder="Add a comment"
+            maxLength={100}
+            required
+          />
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </>
   );
 }
 export default Comments;
