@@ -2,7 +2,7 @@
 
 .comments-container {
   background-color: $bg-color-3;
-  padding: 100px 50px;
+  padding: 30px 50px 100px 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -25,6 +25,7 @@
     padding: 0;
     list-style: none;
     li {
+      width: 665px;
       background-color: rgba($gray-color, 0.1);
       font-size: 18px;
       padding: 10px 10px;
@@ -32,6 +33,7 @@
       border-radius: 10px;
       span {
         padding-left: 25px;
+        word-break: break-all;
       }
       img {
         width: 20px;
@@ -43,20 +45,29 @@
     display: flex;
     gap: 5px;
     input {
+      padding: 5px;
+      font-size: 15px;
       border: 2px solid $brown-color;
       border-radius: 3px;
     }
     select {
+      padding: 5px;
+      font-size: 15px;
       border: 2px solid $brown-color;
       border-radius: 3px;
     }
     textarea {
+      padding: 5px;
+      font-size: 15px;
       width: 200px;
       resize: none;
       border: 2px solid $brown-color;
       border-radius: 3px;
     }
     button {
+      padding: 5px 15px;
+      font-size: 15px;
+      font-weight: bolder;
       cursor: pointer;
       color: $brown-color;
       background-color: rgba($brown-color, 0.1);
@@ -66,6 +77,92 @@
     button:active {
       background-color: rgba($brown-color, 0.3);
       transform: scale(0.96);
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .comments-container {
+    background-color: $bg-color-3;
+    padding: 10px 10px 80px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+    h2 {
+      text-align: center;
+      width: auto;
+      color: $brown-color;
+      font-size: 30px;
+      font-weight: lighter;
+      margin-bottom: 0;
+    }
+    p {
+      color: $brown-color;
+      font-size: 20px;
+      margin-bottom: 35px;
+    }
+    ul {
+      padding: 0;
+      list-style: none;
+      li {
+        width: 400px;
+        background-color: rgba($gray-color, 0.1);
+        font-size: 18px;
+        padding: 10px 10px;
+        margin-bottom: 10px;
+        border-radius: 10px;
+        span {
+          padding-left: 25px;
+          word-break: break-all;
+        }
+        img {
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      width: 420px;
+      input {
+        padding: 10px;
+        font-size: 15px;
+        border: 2px solid $brown-color;
+        border-radius: 3px;
+      }
+      select {
+        padding: 10px;
+        font-size: 15px;
+        border: 2px solid $brown-color;
+        border-radius: 3px;
+      }
+      textarea {
+        padding: 10px;
+        font-size: 15px;
+        width: 396px;
+        height: 50px;
+        resize: none;
+        border: 2px solid $brown-color;
+        border-radius: 3px;
+      }
+      button {
+        padding: 10px;
+        font-size: 15px;
+        font-weight: bolder;
+        cursor: pointer;
+        color: $brown-color;
+        background-color: rgba($brown-color, 0.1);
+        border: 2px solid $brown-color;
+        border-radius: 3px;
+      }
+      button:active {
+        background-color: rgba($brown-color, 0.3);
+        transform: scale(0.96);
+      }
     }
   }
 }

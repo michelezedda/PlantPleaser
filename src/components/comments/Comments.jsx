@@ -1,46 +1,39 @@
 import "./comments.css";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import greenUser from "../../../public/greenUser.png";
 import redUser from "../../../public/redUser.png";
 import blueUser from "../../../public/blueUser.png";
 import { PiArrowElbowDownRight } from "react-icons/pi";
 
 function Comments() {
-  const [comments, setComments] = useState([
-    {
-      id: 1,
-      text: "I can't wait to try this recipe tonight!",
-      username: "GreenChef",
-      image: `${greenUser}`,
-    },
-    {
-      id: 2,
-      text: "Delicious! I highly recommend it.",
-      username: "SpicyVeggie",
-      image: `${redUser}`,
-    },
-  ]);
+  const [comments, setComments] = useState(() => {
+    const storedComments = localStorage.getItem("comments");
+    return storedComments
+      ? JSON.parse(storedComments)
+      : [
+          {
+            id: 1,
+            text: "I can't wait to try this recipe tonight!",
+            username: "GreenChef",
+            image: greenUser,
+          },
+          {
+            id: 2,
+            text: "Delicious! I highly recommend it.",
+            username: "SpicyVeggie",
+            image: redUser,
+          },
+          {
+            id: 3,
+            text: "Wow, just made this incredible recipe and it's an explosion of flavors!",
+            username: "BabyCarrot",
+            image: blueUser,
+          },
+        ];
+  });
   const [newComment, setNewComment] = useState("");
   const [username, setUsername] = useState("");
   const [selectedImage, setSelectedImage] = useState("");
-
-  // Function to load comments from local storage
-  const loadCommentsFromLocalStorage = () => {
-    const storedComments = localStorage.getItem("comments");
-    if (storedComments) {
-      setComments(JSON.parse(storedComments));
-    }
-  };
-
-  // Load comments from local storage on component mount
-  useEffect(() => {
-    loadCommentsFromLocalStorage();
-  }, []);
-
-  // Update local storage when comments state changes
-  useEffect(() => {
-    localStorage.setItem("comments", JSON.stringify(comments));
-  }, [comments]);
 
   const handleCommentChange = (event) => {
     setNewComment(event.target.value);
@@ -57,17 +50,23 @@ function Comments() {
   const handleCommentSubmit = (event) => {
     event.preventDefault();
     if (newComment.trim() !== "" && username.trim() !== "") {
-      const newId = Date.now(); // Generate unique ID based on current time
+      const newId = Date.now();
       const newCommentObject = {
         id: newId,
         text: newComment,
         username: username,
         image: selectedImage,
       };
-      setComments([...comments, newCommentObject]);
+      setComments((prevComments) => [...prevComments, newCommentObject]);
       setNewComment("");
       setUsername("");
       setSelectedImage("");
+
+      //     // Update localStorage directly
+      //     localStorage.setItem(
+      //       "comments",
+      //       JSON.stringify([...comments, newCommentObject])
+      //     );
     }
   };
 
@@ -97,6 +96,7 @@ function Comments() {
           placeholder="Your Username"
           pattern="[^\s]+"
           title="Usernames cannot contain blank spaces"
+          maxLength={15}
           required
         />
         <select value={selectedImage} onChange={handleImageChange} required>
@@ -109,6 +109,7 @@ function Comments() {
           value={newComment}
           onChange={handleCommentChange}
           placeholder="Add a comment"
+          maxLength={100}
           required
         />
         <button type="submit">Submit</button>
