@@ -18,7 +18,7 @@ footer {
         cursor: pointer;
       }
       a:hover {
-        color: $brown-color;
+        color: rgba($bg-color-1, 0.8);
         transition: 0.3s ease;
       }
     }
@@ -27,7 +27,7 @@ footer {
       cursor: pointer;
     }
     span:hover {
-      color: $brown-color;
+      color: rgba($bg-color-1, 0.8);
       transition: 0.3s ease;
     }
   }

@@ -23,8 +23,8 @@ function Footer() {
           <p>
             Copyright © {currentYear} Avocado - All rights reserved &nbsp; |
             &nbsp;
-            <span>About us</span> &nbsp; | &nbsp;{" "}
-            <span> Terms and Conditions</span> &nbsp; | &nbsp;{" "}
+            <span>About us</span> &nbsp; | &nbsp;
+            <span> Terms and Conditions</span> &nbsp; | &nbsp;
             <span>Cookie Policy</span>
           </p>
         </div>
