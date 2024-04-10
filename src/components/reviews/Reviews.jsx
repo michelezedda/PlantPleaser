@@ -10,8 +10,7 @@ function Reviews() {
       userImg: Bella,
       username: "Isabella M. Swan",
       userCity: "Forks, Washington",
-      review:
-        "Discovering this vegetarian app felt like stumbling upon a hidden gem in a culinary desert. From comforting lentil soups to zesty tofu stir-fries, each recipe ignites a new passion for plant-based cooking. It's more than a mere app; it's my trusted companion in the kitchen, guiding me towards healthier, more flavorful meals.",
+      review: `"Each recipe tells a captivating story with flavors that enchant. From lentil soups to avocado sushi, every dish is a masterpiece. Vibrant photos and innovative presentations spark excitement. Bella Swan's taste buds are forever enchanted."`,
       rate: "⭐⭐⭐⭐⭐",
     },
     {
@@ -19,8 +18,7 @@ function Reviews() {
       userImg: Edward,
       username: "Edward Cullen",
       userCity: "Chicago, Illinois",
-      review:
-        "Initially skeptical, I found myself enchanted by the array of vegetarian delights this app offers. Each recipe is a testament to creativity and flavor, transforming mundane ingredients into culinary masterpieces. It has redefined my perception of vegetarian cuisine, proving that meatless meals can be as satisfying and indulgent as any. A true revelation in my eternal quest for gastronomic perfection.",
+      review: `"At first, I approached this app with a skeptic's scrutiny, skeptical of its promises to satiate my culinary desires sans meat. Yet, to my astonishment, it ensnared me in its web of vegetarian wonders. Each recipe transmutes the mundane into epicurean marvels."`,
       rate: "⭐⭐⭐⭐⭐",
     },
   ];
