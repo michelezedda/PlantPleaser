@@ -3,6 +3,7 @@ import Navbar from "../../components/navbar/Navbar";
 import Sidebar from "../../components/sidebar/Sidebar";
 import Download from "../../components/download/Download";
 import Footer from "../../components/footer/Footer";
+import Comments from "../../components/comments/Comments";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import "./recipe.css";
@@ -96,6 +97,7 @@ function Recipe() {
           </div>
         </div>
       )}
+      <Comments />
       <Download />
       <Footer />
     </>
