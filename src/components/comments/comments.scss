@@ -83,6 +83,7 @@
 
 @media screen and (max-width: 800px) {
   .comments-container {
+    width: auto;
     background-color: $bg-color-3;
     padding: 10px 10px 80px 10px;
     display: flex;
@@ -107,7 +108,7 @@
       padding: 0;
       list-style: none;
       li {
-        width: 400px;
+        width: 380px;
         background-color: rgba($gray-color, 0.1);
         font-size: 18px;
         padding: 10px 10px;

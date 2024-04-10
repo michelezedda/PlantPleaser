@@ -3,7 +3,6 @@ import { useState } from "react";
 import greenUser from "../../../public/greenUser.png";
 import redUser from "../../../public/redUser.png";
 import blueUser from "../../../public/blueUser.png";
-import { PiArrowElbowDownRight } from "react-icons/pi";
 
 function Comments() {
   const [comments, setComments] = useState(() => {
@@ -80,11 +79,7 @@ function Comments() {
             <img src={comment.image} alt={comment.username} />
             <strong>{comment.username}: </strong>
             <br />
-            <span>
-              <PiArrowElbowDownRight />
-              &nbsp;
-              {comment.text}
-            </span>
+            <span>{comment.text}</span>
           </li>
         ))}
       </ul>
