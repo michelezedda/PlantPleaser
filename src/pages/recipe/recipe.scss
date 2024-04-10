@@ -1,0 +1,131 @@
+@import "../../styles/config";
+
+.full-recipe {
+  background-color: $bg-color-3;
+  padding: 100px 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+  h2 {
+    text-align: center;
+    width: auto;
+    color: $brown-color;
+    padding-bottom: 20px;
+    font-size: 45px;
+    font-weight: lighter;
+  }
+  img {
+    border: 3px solid $brown-color;
+    box-shadow: 4px 4px 4px #6e4e2e2f;
+    width: 999px;
+    height: 400px;
+    object-fit: center;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  .info-container {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    max-width: 999px;
+    p,
+    ul,
+    ol,
+    li {
+      line-height: 30px;
+      color: $brown-color;
+      font-size: 22px;
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .full-recipe {
+    background-color: $bg-color-3;
+    padding: 130px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+    width: auto;
+    h2 {
+      text-align: center;
+      color: $brown-color;
+      padding-bottom: 10px;
+      font-size: 25px;
+      font-weight: lighter;
+    }
+    img {
+      border: 3px solid $brown-color;
+      box-shadow: 4px 4px 4px #6e4e2e2f;
+      width: 100%;
+      height: 250px;
+      object-fit: center;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+    .info-container {
+      width: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: left;
+      max-width: auto;
+      p,
+      ul,
+      ol,
+      li {
+        line-height: 30px;
+        color: $brown-color;
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 800.02px) and (max-width: 1190px) {
+  .full-recipe {
+    background-color: $bg-color-3;
+    padding: 100px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+    h2 {
+      text-align: center;
+      width: auto;
+      color: $brown-color;
+      padding-bottom: 20px;
+      font-size: 40px;
+      font-weight: lighter;
+    }
+    img {
+      border: 3px solid $brown-color;
+      box-shadow: 4px 4px 4px #6e4e2e2f;
+      width: 100%;
+      height: 350px;
+      object-fit: center;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+    .info-container {
+      width: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: left;
+      max-width: 999px;
+      p,
+      ul,
+      ol,
+      li {
+        line-height: 30px;
+        color: $brown-color;
+        font-size: 22px;
+      }
+    }
+  }
+}

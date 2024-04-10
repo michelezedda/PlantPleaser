@@ -1,0 +1,85 @@
+@import "config";
+
+html,
+body {
+  font-family: $font-stack;
+  line-height: 1.5;
+  font-weight: 400;
+  text-rendering: optimizeLegibility;
+  box-sizing: border-box;
+  background-color: $bg-color-3;
+  margin: 0;
+  padding: 0;
+}
+a {
+  font-weight: 500;
+  color: $brown-color;
+  text-decoration: inherit;
+  a:hover {
+    color: $brown-color;
+  }
+}
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+#load-more {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 90px;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  background-color: rgba($brown-color, 0.5);
+  box-shadow: 4px 4px 4px rgba($brown-color, 0.5);
+  border: 3px solid $brown-color;
+  overflow: hidden;
+  cursor: pointer;
+  &::before {
+    content: "load more";
+    font-size: 20px;
+    color: $brown-color;
+    z-index: 2;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    border-radius: 50%;
+    border: 3px solid $brown-color;
+    transition: transform 0.5s ease;
+    transform: scale(0);
+  }
+  &:hover::before {
+    font-weight: bold;
+  }
+  &:hover {
+    transform: scale(1.1);
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30px;
+    height: 30px;
+    background-color: $brown-color;
+    border-radius: 50%;
+    z-index: 1;
+    opacity: 0;
+    transition: all 1s ease;
+  }
+
+  &:hover::after {
+    width: 300px;
+    height: 300px;
+    opacity: 0.1;
+  }
+}

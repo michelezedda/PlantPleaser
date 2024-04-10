@@ -1,55 +1,25 @@
-import { useState } from "react";
-import React from "react";
-import Sidebar from "../src/components/Sidebar";
-import Navbar from "../src/components/Navbar";
-import Results from "../src/pages/Results";
-import Popular from "../src/pages/Popular";
-import MostRated from "../src/pages/MostRated";
-import axios from "axios";
-import leafBg from "/leafbg.png";
+import React, { useState } from "react";
+import { Helmet } from "react-helmet";
+import Navbar from "./components/navbar/Navbar";
+import Sidebar from "./components/sidebar/Sidebar";
+import MostRated from "./components/mostrated/MostRated";
+import Download from "./components/download/Download";
+import Footer from "./components/footer/Footer";
 
 function App() {
-  const [searchRecipe, setSearchRecipe] = useState("");
   const [searchResults, setSearchResults] = useState([]);
-
-  const handleSearch = async () => {
-    const myKey = import.meta.env.VITE_SOME_KEY;
-    try {
-      const response = await axios.get(
-        "https://api.spoonacular.com/recipes/complexSearch",
-        {
-          params: {
-            apiKey: myKey,
-            query: searchRecipe,
-            tags: "vegan, vegetarian",
-            number: "21",
-          },
-        }
-      );
-      setSearchResults(response.data?.results || []);
-    } catch (error) {
-      console.error("Error fetching data", error);
-    }
-  };
-
   return (
     <>
-      <Navbar
-        searchRecipe={searchRecipe}
-        setSearchRecipe={setSearchRecipe}
-        handleSearch={handleSearch}
-      />
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Avocado</title>
+        <link rel="canonical" href="https://vegavocado.netlify.app/" />
+      </Helmet>
+      <Navbar setSearchResults={setSearchResults} />
       <Sidebar />
-      <Results
-        searchResults={searchResults}
-        setSearchResults={setSearchResults}
-        searchRecipe={searchRecipe}
-      />
-      <Popular />
       <MostRated />
-      <div className="leaf-bg">
-        <img src={leafBg} />
-      </div>
+      <Download />
+      <Footer />
     </>
   );
 }

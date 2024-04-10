@@ -1,0 +1,182 @@
+@import "../../styles/config";
+
+.sidebar-container {
+  height: 100%;
+  width: 300px;
+  min-width: 200px;
+  z-index: 101;
+  padding: 30px 20px;
+  background-color: transparent;
+  position: fixed;
+  top: 0;
+  left: -250px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+  transition-property: all;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in-out;
+  transition-delay: 0s;
+  pointer-events: none;
+  ul {
+    margin: 80px 0 0 30px;
+    list-style: none;
+    padding: 0;
+  }
+  li {
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: 400;
+    cursor: pointer;
+  }
+  li:hover {
+    font-weight: bold;
+  }
+  .sidebar-toggle-btn {
+    background-color: transparent;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 35px;
+    cursor: pointer;
+    pointer-events: auto;
+    border: none;
+    color: $brown-color;
+  }
+}
+.sidebar-container.open {
+  left: 1px;
+  background-color: $bg-color-3;
+  left: -1px;
+  pointer-events: auto;
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba($brown-color, 0.9);
+  z-index: 100;
+  cursor: default;
+  transition: opacity 0.3s ease;
+}
+
+@media screen and (max-width: 800px) {
+  .sidebar-container {
+    height: 100%;
+    width: 300px;
+    min-width: 200px;
+    z-index: 101;
+    padding: 30px 20px;
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    left: -250px;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+    transition-property: all;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0s;
+    pointer-events: none;
+    ul {
+      margin: 80px 0 0 30px;
+      list-style: none;
+      padding: 0;
+    }
+    li {
+      margin-bottom: 20px;
+      font-size: 25px;
+      font-weight: 400;
+      cursor: pointer;
+    }
+    li:hover {
+      font-weight: bold;
+    }
+    .sidebar-toggle-btn {
+      background-color: transparent;
+      position: absolute;
+      top: 10px;
+      right: 5px;
+      font-size: 35px;
+      cursor: pointer;
+      pointer-events: auto;
+      border: none;
+      color: $brown-color;
+    }
+  }
+  .sidebar-container.open {
+    left: 1px;
+    background-color: $bg-color-3;
+    left: -1px;
+  }
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($brown-color, 0.9);
+    z-index: 100;
+    cursor: default;
+    transition: opacity 0.3s ease;
+  }
+}
+@media screen and (min-width: 800.02px) and (max-width: 1190px) {
+  .sidebar-container {
+    height: 100%;
+    width: 300px;
+    min-width: 200px;
+    z-index: 101;
+    padding: 30px 20px;
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    left: -250px;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+    transition-property: all;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0s;
+    pointer-events: none;
+    ul {
+      margin: 80px 0 0 30px;
+      list-style: none;
+      padding: 0;
+    }
+    li {
+      margin-bottom: 20px;
+      font-size: 25px;
+      font-weight: 400;
+      cursor: pointer;
+    }
+    li:hover {
+      font-weight: bold;
+    }
+    .sidebar-toggle-btn {
+      background-color: transparent;
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      font-size: 40px;
+      cursor: pointer;
+      pointer-events: auto;
+      border: none;
+      color: $brown-color;
+    }
+  }
+  .sidebar-container.open {
+    left: 1px;
+    background-color: $bg-color-3;
+    left: -1px;
+  }
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($brown-color, 0.9);
+    z-index: 100;
+    cursor: default;
+    transition: opacity 0.3s ease;
+  }
+}
