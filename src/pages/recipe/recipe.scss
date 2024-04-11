@@ -1,7 +1,7 @@
 @import "../../styles/config";
 
 .full-recipe {
-  background-color: $bg-color-3;
+  background-color: rgba($bg-color-1, 0.5);
   padding: 100px 50px;
   display: flex;
   flex-direction: column;
@@ -44,7 +44,7 @@
 
 @media screen and (max-width: 800px) {
   .full-recipe {
-    background-color: $bg-color-3;
+    background-color: rgba($bg-color-1, 0.5);
     padding: 130px 10px;
     display: flex;
     flex-direction: column;
@@ -88,7 +88,7 @@
 
 @media screen and (min-width: 800.02px) and (max-width: 1190px) {
   .full-recipe {
-    background-color: $bg-color-3;
+    background-color: rgba($bg-color-1, 0.5);
     padding: 100px 20px;
     display: flex;
     flex-direction: column;

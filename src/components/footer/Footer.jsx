@@ -25,7 +25,8 @@ function Footer() {
             &nbsp;
             <span>About us</span> &nbsp; | &nbsp;
             <span> Terms and Conditions</span> &nbsp; | &nbsp;
-            <span>Cookie Policy</span>
+            <span>Cookie Policy</span> &nbsp; | &nbsp;
+            <span>Privacy Policy</span>
           </p>
         </div>
       </footer>
