@@ -3,9 +3,12 @@ import { Helmet } from "react-helmet";
 import Navbar from "./components/navbar/Navbar";
 import Sidebar from "./components/sidebar/Sidebar";
 import MostRated from "./components/mostrated/MostRated";
+import MostPopular from "./components/mostpopular/MostPopular";
 import Download from "./components/download/Download";
 import Footer from "./components/footer/Footer";
 import Reviews from "./components/reviews/Reviews";
+import Header from "./components/header/Header";
+import Newsletter from "./components/newsletter/Newsletter";
 
 function App() {
   const [searchResults, setSearchResults] = useState([]);
@@ -18,7 +21,10 @@ function App() {
       </Helmet>
       <Navbar setSearchResults={setSearchResults} />
       <Sidebar />
+      <Header />
       <MostRated />
+      <MostPopular />
+      <Newsletter />
       <Reviews />
       <Download />
       <Footer />
