@@ -1,6 +1,7 @@
 @import "../../styles/config";
 
 .download-container {
+  padding: 10px 20px 0 20px;
   justify-content: center;
   display: flex;
   flex-wrap: wrap;
@@ -13,7 +14,8 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 50%;
+    max-width: 800px;
+    width: auto;
     h2 {
       text-align: left;
       font-size: 40px;
@@ -57,7 +59,8 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      width: 80%;
+      max-width: 400px;
+      width: auto;
       h2 {
         text-align: center;
         font-size: 35px;
@@ -87,9 +90,9 @@
     }
   }
 }
-@media screen and (min-width: 800.02px) and (max-width: 1190px) {
+@media screen and (min-width: 800.02px) and (max-width: 1420px) {
   .download-container {
-    padding: 0 20px;
+    padding: 10px 10px 0 10px;
     justify-content: center;
     display: flex;
     flex-wrap: wrap;
@@ -102,7 +105,8 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      width: 50%;
+      max-width: 400px;
+      width: auto;
       h2 {
         text-align: left;
         font-size: 40px;
