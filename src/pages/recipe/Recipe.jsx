@@ -14,6 +14,10 @@ function Recipe() {
   const params = useParams();
 
   useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  useEffect(() => {
     const fetchDetails = async () => {
       try {
         const myKey = import.meta.env.VITE_SPOONACULAR_KEY;

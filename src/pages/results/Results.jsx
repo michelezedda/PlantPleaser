@@ -15,6 +15,10 @@ function Results() {
   const queryParams = new URLSearchParams(location.search);
   const searchRecipe = queryParams.get("query") || "";
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const loadMoreRecipes = async () => {
     const myKey = import.meta.env.VITE_SPOONACULAR_KEY;
     try {

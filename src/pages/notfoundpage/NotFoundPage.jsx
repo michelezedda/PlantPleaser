@@ -1,3 +1,4 @@
+import React, { useEffect } from "react";
 import Navbar from "../../components/navbar/Navbar";
 import Sidebar from "../../components/sidebar/Sidebar";
 import Download from "../../components/download/Download";
@@ -7,6 +8,9 @@ import { Helmet } from "react-helmet";
 import Avocado404 from "../../../public/404avocado.png";
 
 function NotFoundPage() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <Helmet>

@@ -12,6 +12,10 @@ function Category() {
   const [categoryRecipes, setCategoryRecipes] = useState([]);
   const { category } = useParams();
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const fetchCategoryRecipes = async () => {
     const myKey = import.meta.env.VITE_SPOONACULAR_KEY;
     try {
