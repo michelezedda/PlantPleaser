@@ -26,7 +26,7 @@ function Results() {
             query: searchRecipe,
             tags: `vegan, vegetarian`,
             diet: "vegan, vegetarian",
-            number: "8",
+            number: "7",
             offset: (currentPage - 1) * 8,
           },
         }

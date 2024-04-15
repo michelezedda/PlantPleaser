@@ -21,7 +21,7 @@ function Category() {
           params: {
             apiKey: myKey,
             tags: `vegan, vegetarian, ${category}`,
-            number: "21",
+            number: "7",
           },
         }
       );
