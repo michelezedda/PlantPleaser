@@ -24,5 +24,5 @@
 
 ## Project Link
 Explore Avocado: :link: [Avocado](https://vegavocado.netlify.app/)
-<br>
+
 [![Netlify Status](https://api.netlify.com/api/v1/badges/6346b06e-2ee8-465d-95fc-83ef491f9403/deploy-status)](https://app.netlify.com/sites/vegavocado/deploys)
