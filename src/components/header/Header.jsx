@@ -12,7 +12,7 @@ function Header() {
             flavorful, meat-free recipes for every palate
           </p>
         </div>
-        <img src={myAvocado} />
+        <img src={myAvocado} alt="avocado" />
       </div>
     </>
   );

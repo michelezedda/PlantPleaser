@@ -77,7 +77,7 @@ function Comments() {
         <ul>
           {comments.map((comment) => (
             <li key={comment.id}>
-              <img src={comment.image} /> &nbsp;
+              <img src={comment.image} alt="avatar" /> &nbsp;
               <strong>{comment.username}: </strong>
               <br />
               <div className="comment">{comment.text}</div>

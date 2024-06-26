@@ -22,7 +22,7 @@ function NotFoundPage() {
       <Sidebar />
       <div className="not-found-container">
         <h2>Oops! Looks like this page went vegging out somewhere.</h2>
-        <img src={Avocado404} />
+        <img src={Avocado404} alt="404" />
       </div>
       <Download />
       <Footer />

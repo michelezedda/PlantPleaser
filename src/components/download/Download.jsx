@@ -15,18 +15,18 @@ function Download() {
           </p>
           <div className="download-icons">
             <a href="https://www.apple.com/it/app-store/" target="_blank">
-              <img src={AppStore} />
+              <img src={AppStore} alt="app store" />
             </a>
             <a
               href="https://play.google.com/store/games?hl=en&gl=US&pli=1"
               target="_blank"
             >
-              <img src={PlayStore} />
+              <img src={PlayStore} alt="play store" />
             </a>
           </div>
         </div>
         <div className="right-download-container">
-          <img src={MyPhone} alt="phone" className="download-img" />
+          <img src={MyPhone} alt="smartphone" className="download-img" />
         </div>
       </div>
     </>
