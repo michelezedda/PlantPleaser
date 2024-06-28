@@ -4,7 +4,6 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./styles/index.css";
 import App from "./App.jsx";
 import Recipe from "./pages/recipe/Recipe.jsx";
-import NotFoundPage from "./pages/notfoundpage/NotFoundPage.jsx";
 import Category from "./pages/category/Category.jsx";
 import Results from "./pages/results/Results.jsx";
 
