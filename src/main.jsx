@@ -16,7 +16,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route path="/recipe/:id" element={<Recipe />} />
         <Route path="/category/:category" element={<Category />} />
         <Route path="/results" element={<Results />} />
-        <Route path="*" element={<NotFoundPage />} />
+        <Route path="*" element={<App />} />
       </Routes>
     </Router>
   </React.StrictMode>
