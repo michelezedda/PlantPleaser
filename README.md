@@ -23,4 +23,4 @@
 - **API**: spoonacular.com/food-api
 
 ## Project Link
-Explore Avocado: :link: [Avocado](vegavocado.vercel.app)
+Explore Avocado: :link: [Avocado](https://vegavocado.vercel.app/)
