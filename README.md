@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <img src="https://vegavocado.netlify.app/logo.png" alt="Avocado Logo" width="400">
+  <img src="https://vegavocado.vercel.app/logo.png" alt="Avocado Logo" width="400">
   <br>
 </h1>
 
