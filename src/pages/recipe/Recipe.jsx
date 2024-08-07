@@ -45,7 +45,7 @@ function Recipe() {
       <Helmet>
         <meta charSet="utf-8" />
         <title>{recipeTitle}</title>
-        <link rel="canonical" href="https://vegavocado.netlify.app/" />
+        <link rel="canonical" href="https://vegavocado.vercel.app/" />
       </Helmet>
       <Navbar />
       <Sidebar />

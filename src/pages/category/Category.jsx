@@ -66,7 +66,7 @@ function Category() {
       <Helmet>
         <meta charSet="utf-8" />
         <title>Avocado: {category} recipes</title>
-        <link rel="canonical" href="https://vegavocado.netlify.app/" />
+        <link rel="canonical" href="https://vegavocado.vercel.app/" />
       </Helmet>
       <Navbar />
       <Sidebar />

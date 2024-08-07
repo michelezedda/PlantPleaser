@@ -22,7 +22,7 @@ function App() {
       <Helmet>
         <meta charSet="utf-8" />
         <title>Avocado - Vegetarian recipes</title>
-        <link rel="canonical" href="https://vegavocado.netlify.app/" />
+        <link rel="canonical" href="https://vegavocado.vercel.app/" />
       </Helmet>
       <Navbar setSearchResults={setSearchResults} />
       <Sidebar />

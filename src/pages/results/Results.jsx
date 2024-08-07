@@ -54,7 +54,7 @@ function Results() {
       <Helmet>
         <meta charSet="utf-8" />
         <title>{`Your results for ${searchRecipe}`}</title>
-        <link rel="canonical" href="https://vegavocado.netlify.app/" />
+        <link rel="canonical" href="https://vegavocado.vercel.app/" />
       </Helmet>
       <Navbar setSearchResults={setSearchResults} />
       <Sidebar />
