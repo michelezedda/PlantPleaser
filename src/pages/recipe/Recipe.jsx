@@ -12,7 +12,9 @@ import { Helmet } from "react-helmet";
 function Recipe() {
   const [details, setDetails] = useState({});
   const params = useParams();
-
+  
+  const recipeTitle = details.title || "Recipe";
+  
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -38,7 +40,7 @@ function Recipe() {
     fetchDetails();
   }, [params.id]);
 
-  const recipeTitle = details.title || "Recipe";
+
 
   return (
     <>
