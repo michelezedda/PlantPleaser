@@ -15,7 +15,6 @@
 ## Technologies Used
 - **HTML5 & CSS3**: Markup and styling languages for web development.
 - **Sass**: CSS extension language for more efficient styling.
-- **JavaScript**: Programming language for web interactivity.
 - **Git**: Version control system for tracking changes and collaborating.
 - **React**: JavaScript library for dynamic user interfaces.
 - **Vite**: Front-end dev tool improving developer experience.
